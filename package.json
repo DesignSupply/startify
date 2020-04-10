@@ -1,0 +1,51 @@
+{
+  "name": "startify",
+  "version": "1.0.0",
+  "description": "Development environment for website creation with design and static coding.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "npx gulp"
+  },
+  "author": {
+    "name": "DesignSupply.",
+    "email": "info@designsuply-web.com",
+    "url": "https://designsupply-web.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "autoprefixer": "^9.7.5",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-ejs": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "node-sass": "^4.13.1",
+    "through2": "^3.0.1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "ie >= 11",
+    "iOS >= 8.1",
+    "Android >= 4.4"
+  ]
+}

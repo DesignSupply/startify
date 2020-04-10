@@ -1,0 +1,85 @@
+extends components/_layout.pug
+
+block variables
+  //- ページ固有設定用の変数
+  - var page = 'home'
+  - var siteInfo = global
+  - var meta = siteInfo.pageMeta[page]
+  - var bodyClass = 'page-home-body'
+  - var isFrontPage = true
+
+block append pageMeta
+    // ページ固有設定メタデータ 
+    meta(property="og:title" content=meta.title)
+    meta(property="og:description" content=meta.description)
+    meta(property="og:url" content=siteInfo.siteUrl + meta.path)
+    meta(property="og:type" content=meta.type)
+    meta(property="og:image" content=meta.ogpImage)
+    meta(name="twitter:title" content=meta.title)
+    meta(name="twitter:description" content=meta.description)
+    meta(name="twitter:url" content=siteInfo.siteUrl + meta.path)
+    meta(name="description" content=meta.description)
+    if isFrontPage
+      title #{siteInfo.siteName}
+    else
+      title #{meta.title} | #{siteInfo.siteName}
+
+block pageContent
+      main.l-main.o-page.o-front-page
+        article.o-section-01
+          section.l-wrapper
+            div.l-container
+              div.__inner-depth-1
+                div.__inner-depth-2
+                  div.__inner-depth-3
+                    div.__inner-depth-4
+                      div.__inner-depth-5
+        // section 01 end 
+        article.o-section-02
+          section.l-wrapper
+            div.l-container
+              div.__inner-depth-1
+                div.__inner-depth-2
+                  div.__inner-depth-3
+                    div.__inner-depth-4
+                      div.__inner-depth-5
+        // section 02 end 
+        article.o-section-03
+          section.l-wrapper
+            div.l-container
+              div.__inner-depth-1
+                div.__inner-depth-2
+                  div.__inner-depth-3
+                    div.__inner-depth-4
+                      div.__inner-depth-5
+        // section 03 end 
+        article.o-section-04
+          section.l-wrapper
+            div.l-container
+              div.__inner-depth-1
+                div.__inner-depth-2
+                  div.__inner-depth-3
+                    div.__inner-depth-4
+                      div.__inner-depth-5
+        // section 04 end 
+        article.o-section-05
+          section.l-wrapper
+            div.l-container
+              div.__inner-depth-1
+                div.__inner-depth-2
+                  div.__inner-depth-3
+                    div.__inner-depth-4
+                      div.__inner-depth-5
+        // section 05 end 
+        aside.l-aside
+          section.l-wrapper
+            div.l-container
+              div.__inner-depth-1
+                div.__inner-depth-2
+                  div.__inner-depth-3
+                    div.__inner-depth-4
+                      div.__inner-depth-5
+        // aside end 
+      // main end 
+
+block append bodyScript

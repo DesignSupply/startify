@@ -1,0 +1,135 @@
+<% 
+  // ページ固有設定用の変数
+  const page = 'home';
+  const isFrontPage = true;
+  const addClass = {
+    body: 'page-home-body',
+    header: 'page-home-header',
+    footer: 'page-home-footer'
+  };
+%>
+<%-
+  include(
+    'components/_header',
+    {
+      global: global,
+      pageMeta: global.pageMeta[page],
+      isFrontPage: isFrontPage,
+      className: addClass
+    }
+  );
+%>
+      <main class="l-main o-page o-front-page">
+        <article class="o-section-01">
+          <section class="l-wrapper">
+            <div class="l-container">
+              <div class="__inner-depth-1">
+                <div class="__inner-depth-2">
+                  <div class="__inner-depth-3">
+                    <div class="__inner-depth-4">
+                      <div class="__inner-depth-5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <!-- section 01 end -->
+        <article class="o-section-02">
+          <section class="l-wrapper">
+            <div class="l-container">
+              <div class="__inner-depth-1">
+                <div class="__inner-depth-2">
+                  <div class="__inner-depth-3">
+                    <div class="__inner-depth-4">
+                      <div class="__inner-depth-5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <!-- section 02 end -->
+        <article class="o-section-03">
+          <section class="l-wrapper">
+            <div class="l-container">
+              <div class="__inner-depth-1">
+                <div class="__inner-depth-2">
+                  <div class="__inner-depth-3">
+                    <div class="__inner-depth-4">
+                      <div class="__inner-depth-5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <!-- section 03 end -->
+        <article class="o-section-04">
+          <section class="l-wrapper">
+            <div class="l-container">
+              <div class="__inner-depth-1">
+                <div class="__inner-depth-2">
+                  <div class="__inner-depth-3">
+                    <div class="__inner-depth-4">
+                      <div class="__inner-depth-5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <!-- section 04 end -->
+        <article class="o-section-05">
+          <section class="l-wrapper">
+            <div class="l-container">
+              <div class="__inner-depth-1">
+                <div class="__inner-depth-2">
+                  <div class="__inner-depth-3">
+                    <div class="__inner-depth-4">
+                      <div class="__inner-depth-5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <!-- section 05 end -->
+        <aside class="l-aside">
+          <section class="l-wrapper">
+            <div class="l-container">
+              <div class="__inner-depth-1">
+                <div class="__inner-depth-2">
+                  <div class="__inner-depth-3">
+                    <div class="__inner-depth-4">
+                      <div class="__inner-depth-5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+        <!-- aside  end -->
+      </main>
+      <!-- main end -->
+<%-
+  include(
+    'components/_footer',
+    {
+      global: global,
+      className: addClass
+    }
+  );
+%>

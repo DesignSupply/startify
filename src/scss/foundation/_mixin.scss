@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* ---------------------------
+  media query
+--------------------------- */
+@mixin media-query($breakpoint-key) {
+  @media #{map-get($breakpoint-list, $breakpoint-key)} {
+    @content;
+  }
+}
+
+/* ---------------------------
+  hack
+--------------------------- */
+@mixin hack-ie11 {
+  @media all and (-ms-high-contrast:none) {
+    *::-ms-backdrop, body {
+      @content;
+    }
+  }
+}
+@mixin hack-edge {
+  @supports (-ms-ime-align:auto) {
+    @content;
+  }
+}
+@mixin hack-firefox {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+@mixin hack-chrome {
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @content;
+  }
+}
+@mixin hack-safari {
+  _::-webkit-full-page-media, _:future, :root body {
+    @content;
+  }
+}
+
+/* ---------------------------
+  animation
+--------------------------- */

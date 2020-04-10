@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* ---------------------------
+  color scheme
+--------------------------- */
+$color-base-1: #EEEEEE;
+$color-base-2: #C8C8C8;
+$color-base-3: #ACACAC;
+$color-base-4: #7B7B7B;
+$color-base-5: #5C5C5C;
+$color-base-6: #333333;
+$color-primary-1: #C0FFFF;
+$color-primary-2: #6BFFFF;
+$color-primary-3: #00FFFF;
+$color-primary-4: #00D2D2;
+$color-primary-5: #008D8D;
+$color-primary-6: #004E4E;
+$color-secondary-1: #FFD9FF;
+$color-secondary-2: #FF9AFF;
+$color-secondary-3: #FF59FF;
+$color-secondary-4: #FF00FF;
+$color-secondary-5: #C400C4;
+$color-secondary-6: #6E006E;
+$color-accent-1: #FFFF8E;
+$color-accent-2: #FFFF00;
+$color-accent-3: #E5E500;
+$color-accent-4: #C3C300;
+$color-accent-5: #767600;
+$color-accent-6: #3F3F00;
+$color-white: #FFF;
+$color-black: #000;
+
+/* ---------------------------
+  UI color 
+--------------------------- */
+$ui-color-list: (
+  error: #B00,
+  warning: #DA0,
+  notice: #0CE,
+  success: #0C4,
+  negative: #AAA
+) !default;
+@function ui-color($ui-color-key) {
+  @return #{map-get($ui-color-list, $ui-color-key)}
+}
+
+/* ---------------------------
+  SNS brand color
+--------------------------- */
+$sns-color-list: (
+  facebook: #315096,
+  twitter: #55acee,
+  instagram: #D93177,
+  tumblr: #36465d,
+  googleplus: #dd4b39,
+  line: #00b900,
+  hatena: #008fde,
+  youtube: #cd201f,
+  pinterest: #bd081c,
+  pocket: #dc3d50,
+  linkedin: #0079ba,
+  feedly: #6cc655
+) !default;
+@function sns-color($sns-color-key) {
+  @return #{map-get($sns-color-list, $sns-color-key)}
+}

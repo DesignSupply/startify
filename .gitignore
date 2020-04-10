@@ -1,0 +1,4 @@
+/node_modules/
+/src/images/
+/dist/assets/img/_min/
+/package-lock.json

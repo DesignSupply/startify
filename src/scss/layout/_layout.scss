@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* ---------------------------
+  html body
+--------------------------- */
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  body {
+    width: inherit;
+    height: inherit;
+    min-height: 100vh;
+    font-family: $default-font-family;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    color: $default-color;
+  }
+  @include media-query(sm) {
+    body {
+      font-size: responsive-font-size(16,$screen-sm);
+    }
+  }
+  @include media-query(xs) {
+    body {
+      font-size: responsive-font-size(16,$screen-xs);
+    }
+  }
+}
+
+/* ---------------------------
+  base layout
+--------------------------- */
+$header-min-height: auto;
+$header-max-height: auto;
+$footer-min-height: auto;
+$footer-max-height: auto;
+.l-base {
+  width: inherit;
+  height: auto !important;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template:
+    "header" minmax($header-min-height, $header-max-height)
+    "main" 1fr
+    "footer" minmax($footer-min-height, $footer-max-height)
+    / 100%;
+}
+
+/* ---------------------------
+  header
+--------------------------- */
+.l-header {
+  grid-area: header;
+}
+
+/* ---------------------------
+  footer
+--------------------------- */
+.l-footer {
+  grid-area: footer;
+}
+
+/* ---------------------------
+  main
+--------------------------- */
+.l-main {
+  grid-area: main;
+}
+
+/* ---------------------------
+  aside
+--------------------------- */
+.l-aside {
+}
+
