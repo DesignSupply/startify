@@ -1,6 +1,6 @@
-/node_modules/
-/src/images/*
-!/src/images/.gitkeep
-/dist/assets/img/_min/*
-!/dist/assets/img/_min/.gitkeep
-/package-lock.json
+/develop/node_modules/
+/develop/src/images/*
+!/develop/src/images/.gitkeep
+/develop/dist/assets/img/_min/*
+!/develop/dist/assets/img/_min/.gitkeep
+/develop/package-lock.json
