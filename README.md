@@ -1,6 +1,6 @@
 # Startify
 
-Startifyはウェブサイトを作成するために必要なリソースがひととおり揃った開発環境です。デザインから静的コーディングまでシンプルなウェブページをワンストップで効率よく作成できます。
+Startifyはウェブサイトを作成するために必要なリソースがひととおり揃った開発環境です。フロントエンドの技術を使って、デザインから静的コーディングまでシンプルなウェブページをワンストップで効率よく作成できます。
 
 
 
@@ -8,16 +8,18 @@ Startifyはウェブサイトを作成するために必要なリソースがひ
 
 Startifyで主に出来ることは以下になります。
 
-* Sketch、Adobe XD、Figmaに対応したデザインテンプレート
+* Sketch、Adobe XD、Figmaに対応したテンプレートを使ったデザイン制作
 * Gulpを使ったタスクの自動検知
-* テンプレートエンジン（EJS、Pug）を使ったHTMLマークアップ
+* テンプレートエンジン（EJS、Pug）を使ったHTMLマークアップと自動整形
 * テンプレートエンジン（EJS、Pug）内での外部JSONデータ読み込み
 * Sass（SCSS）のコンパイル
-* Autoprefixerによるベンダープレフィックスの自動付与
-* Browserifyで外部スクリプトの読み込み
+* デザインテンプレートのフォーマットに合わせたSass変数およびmixinの使用
+* Autoprefixerを使ったベンダープレフィックスの自動付与
+* Browserifyを使った外部スクリプトの読み込み
 * Babelを使ったJavaScriptのトランスパイル
+* jQueryライブラリの使用
 * ソースコードのマッピングファイルの生成
-* CSS、JavaScriptファイルのminify化
+* CSS、JavaScriptファイルの自動minify化
 * 開発用ローカルサーバーの起動とBrowsersyncでの自動リロード
 * 各種画像ファイル（jpg、png、gif、svg）の圧縮
 
@@ -116,6 +118,7 @@ $ npx gulp imagemin
 ## Author
 
 Ogawa Shinya
+
 info@designsupply-web.com
 
 
