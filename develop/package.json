@@ -6,8 +6,16 @@
   "scripts": {
     "dev": "npx gulp"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DesignSupply/startify.git"
+  }
+  "bugs": {
+    "url": "https://github.com/DesignSupply/startify/issues",
+    "email" : "info@designsuply-web.com"
+  }
   "author": {
-    "name": "DesignSupply.",
+    "name": "Ogawa Shinya",
     "email": "info@designsuply-web.com",
     "url": "https://designsupply-web.com/"
   },
