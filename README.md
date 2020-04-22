@@ -80,17 +80,17 @@ $ npm run dev
 $ npx gulp server
 ```
 #### 3. EJSコンパイル
-※ distディレクトリにHTMLファイルとして生成されます
+※ distディレクトリにHTMLファイルとして出力されます
 ```bash
 $ npx gulp ejs
 ```
 #### 4. Pugコンパイル
-※ distディレクトリにHTMLファイルとして生成されます
+※ distディレクトリにHTMLファイルとして出力されます
 ```bash
 $ npx gulp pug
 ```
 #### 5. 外部スクリプト読み込み、JavaScriptトランスパイル（ECMAScript）
-※ dist/assets/jsへ生成されます、マッピングファイルも自動的に生成されます
+※ dist/assets/jsへ出力されます、マッピングファイルも自動的に生成されます
 ```bash
 $ npx gulp es
 ```
@@ -100,12 +100,12 @@ $ npx gulp es
 $ npx gulp ts
 ```
 #### 7. Sassコンパイル
-※ マッピングファイルも自動的に生成されます
+※ dist/assets/cssへ出力されます、マッピングファイルも自動的に生成されます
 ```bash
 $ npx gulp sass
 ```
 #### 8. 一括画像圧縮
-※ 圧縮された画像ファイルはdist/assets/img/_minに出力されます
+※ 圧縮された画像ファイルはdist/assets/img/_minへ出力されます
 ```bash
 $ npx gulp imagemin
 ```
