@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
 const $ = require('jQuery');
 
 // legacy browser alert
 const isLegacyIE = () => {
-  const ua = navigator.userAgent,
+  const targetUserAgent = navigator.userAgent,
     notice = 'ご利用のウェブブラウザでは当サイトを正常に閲覧できません。ブラウザのバージョンを最新にして再度アクセスしてください。',
-    targetList = [ 
+    targets = [ 
       'MSIE 6.0', // Internet Explorer 6
       'MSIE 7.0', // Internet Explorer 7
       'MSIE 8.0', // Internet Explorer 8
@@ -14,8 +14,8 @@ const isLegacyIE = () => {
       'MSIE 10.0', // Internet Explorer 10
       'Trident/7.0' // Internet Explorer 11
     ];
-  targetList.forEach((target) => {
-    if( ua.indexOf(target) != -1) {
+    targets.forEach((target) => {
+    if(targetUserAgent.indexOf(target) != -1) {
       alert(notice);
     } else {
       return false;
