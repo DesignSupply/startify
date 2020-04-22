@@ -16,8 +16,9 @@ Startifyで主に出来ることは以下になります。
 * デザインテンプレートのフォーマットに合わせたSass変数およびmixinの使用
 * Autoprefixerを使ったベンダープレフィックスの自動付与
 * Browserifyを使った外部スクリプトの読み込み
-* Babelを使ったJavaScriptのトランスパイル
-* jQueryライブラリの使用
+* Babelを使ったJavaScript（ECMAScript）のトランスパイル
+* webpack環境でのTypeScriptのコンパイル
+* jQueryライブラリの使用（ECMAScript・TypeScript）
 * ソースコードのマッピングファイルの生成
 * CSS、JavaScriptファイルの自動minify化
 * 開発用ローカルサーバーの起動とBrowsersyncでの自動リロード
@@ -79,27 +80,32 @@ $ npm run dev
 $ npx gulp server
 ```
 #### 3. EJSコンパイル
-※distフォルダー内にHTMLファイルとして生成されます
+※ distディレクトリにHTMLファイルとして生成されます
 ```bash
 $ npx gulp ejs
 ```
 #### 4. Pugコンパイル
-※distフォルダー内にHTMLファイルとして生成されます
+※ distディレクトリにHTMLファイルとして生成されます
 ```bash
 $ npx gulp pug
 ```
 #### 5. 外部スクリプト読み込み、JavaScriptトランスパイル（ECMAScript）
-※マッピングファイルも自動的に生成されます
+※ dist/assets/jsへ生成されます、マッピングファイルも自動的に生成されます
 ```bash
 $ npx gulp es
 ```
-#### 6. Sassコンパイル
-※マッピングファイルも自動的に生成されます
+#### 6. webpackでTypeScriptコンパイル
+※ dist/assets/jsへ生成されます
+```bash
+$ npx gulp ts
+```
+#### 7. Sassコンパイル
+※ マッピングファイルも自動的に生成されます
 ```bash
 $ npx gulp sass
 ```
-#### 7. 一括画像圧縮
-※画像圧縮時にはdist/assets/img/_minディレクトリに出力されます
+#### 8. 一括画像圧縮
+※ 圧縮された画像ファイルはdist/assets/img/_minに出力されます
 ```bash
 $ npx gulp imagemin
 ```
@@ -108,10 +114,13 @@ $ npx gulp imagemin
 
 ## Note
 
+* Sassファイルの変数はSketch、Adobe XD、Figmaの各テンプレートのデザインガイドに合わせています。
 * Sassのファイルおよびディレクトリの構成はFLOCSSに基づいて設計しています。
-* プロジェクト内で使用しているclass名はBEMの命名規則を参考に設計しています。
-* タイトル、ディスクリプション、OGPなどページ固有のmeta要素はEJSもしくはPugのソースファイルに含まれているJSONファイルで指定できます。
+* プロジェクト内で使用しているclass名はBEMの命名規則を緩やかに沿った設計になっています。
+* タイトル、ディスクリプション、OGPなどページ固有のmeta要素はEJSもしくはPugのソースファイルのディレクトリに含まれているJSONファイルで指定できます。
 * 初期設定ではEJSおよびPugのHTMLファイル出力先が同じになりますので上書きにご注意ください。
+* 初期設定ではJavaScript（ECMAScript）およびTypeScriptのコンパイル出力先が同じになりますので上書きにご注意ください。
+* 初期設定では〜IE11などのレガシーブラウザではページ表示時にアラートで警告が出るようになっています。
 
 
 
