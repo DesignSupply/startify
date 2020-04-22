@@ -1,0 +1,18 @@
+{
+  "include": [
+    "src/ts/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "incremental": true, 
+    "target": "ES5",
+    "module": "es2015", 
+    "sourceMap": true, 
+    "removeComments": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true 
+  }
+}

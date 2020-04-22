@@ -11,7 +11,7 @@ const { src, dest, watch, parallel } = require("gulp"),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
   autoprefixer = require('autoprefixer'),
-  postcss = require('gulp-postcss'),
+  postCSS = require('gulp-postcss'),
   cleanCSS = require('gulp-clean-css'),
   pug = require('gulp-pug'),
   data = require('gulp-data'),
@@ -20,7 +20,10 @@ const { src, dest, watch, parallel } = require("gulp"),
   prettify = require('gulp-prettify'),
   imagemin = require('gulp-imagemin'),
   mozjpeg  = require('imagemin-mozjpeg'),
-  pngquant = require('imagemin-pngquant');
+  pngquant = require('imagemin-pngquant'),
+  webpackStream = require('webpack-stream'),
+  webpackConfig = require('./webpack.config.js'),
+  webpack = require('webpack');
 
 // Local server & Browser sync
 const taskServer = (done) => {
@@ -37,6 +40,11 @@ const taskReload = (done) => {
   browsersync.reload();
   done();
 };
+
+// webpack & TypeScript
+const taskTs = () => 
+  webpackStream(webpackConfig, webpack)
+    .pipe(dest('dist/assets/js'));
 
 // Browserify & Babel 
 const taskEs = (done) => {
@@ -78,7 +86,7 @@ const taskSass = () =>
     ))
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(postcss([
+    .pipe(postCSS([
       autoprefixer(
         { cascade: false, grid: "autoplace" }
       )
@@ -160,8 +168,9 @@ const taskImagemin = () =>
 // Wacth tasks
 const taskWatch = (done) => {
   watch('dist/**/*', taskReload);
-  watch('src/scss/**/*.scss', taskSass);
+  watch('src/ts/**/*.ts', taskTs);
   watch('src/es/*.js', taskEs);
+  watch('src/scss/**/*.scss', taskSass);
   watch('src/pug/**/*.pug', taskPug);
   watch('src/ejs/**/*.ejs', taskEjs);
   watch('src/images/*', taskImagemin);
@@ -170,6 +179,7 @@ const taskWatch = (done) => {
 
 // Task run （$ npx gulp *****）
 exports.server = taskServer;
+exports.ts = taskTs;
 exports.es = taskEs;
 exports.sass = taskSass;
 exports.pug = taskPug;
