@@ -100,7 +100,6 @@
     letter-spacing: $letter-spacing-caption$letter-spacing-caption;
     font-weight: normal;
   }
-  
 }
 @function responsive-font-size($target-font-size,$target-screen-size){
   $view-width-ratio: $target-screen-size / 100;
