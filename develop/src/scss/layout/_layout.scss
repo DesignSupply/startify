@@ -32,10 +32,14 @@ html {
 /* ---------------------------
   base layout
 --------------------------- */
+
+/* -- config -------------- */
 $header-min-height: auto;
 $header-max-height: auto;
 $footer-min-height: auto;
 $footer-max-height: auto;
+
+/* -- layout -------------- */
 .l-base {
   width: inherit;
   height: auto !important;
@@ -76,4 +80,3 @@ $footer-max-height: auto;
 --------------------------- */
 .l-aside {
 }
-
