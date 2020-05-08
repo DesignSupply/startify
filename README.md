@@ -12,7 +12,7 @@ Startifyで主に出来ることは以下になります。
 * Gulpを使ったタスクの自動検知
 * テンプレートエンジン（EJS、Pug）を使ったHTMLマークアップと自動整形
 * テンプレートエンジン（EJS、Pug）内での外部JSONデータ読み込み
-* Sass（SCSS）のコンパイル
+* Sass（SCSS記法・SASS記法）のコンパイル
 * デザインテンプレートのフォーマットに合わせたSass変数およびmixinの使用
 * Autoprefixerを使ったベンダープレフィックスの自動付与
 * Browserifyを使った外部スクリプトの読み込み
@@ -99,12 +99,17 @@ $ npx gulp es
 ```bash
 $ npx gulp ts
 ```
-#### 7. Sassコンパイル
+#### 7. Sass（SCSS記法）コンパイル
+※ dist/assets/cssへ出力されます、マッピングファイルも自動的に生成されます
+```bash
+$ npx gulp scss
+```
+#### 8. Sass（SASS記法）コンパイル
 ※ dist/assets/cssへ出力されます、マッピングファイルも自動的に生成されます
 ```bash
 $ npx gulp sass
 ```
-#### 8. 一括画像圧縮
+#### 9. 一括画像圧縮
 ※ 圧縮された画像ファイルはdist/assets/img/_minへ出力されます
 ```bash
 $ npx gulp imagemin
@@ -120,6 +125,7 @@ $ npx gulp imagemin
 * タイトル、ディスクリプション、OGPなどページ固有のmeta要素はEJSもしくはPugのソースファイルのディレクトリに含まれているJSONファイルで指定できます。
 * 初期設定ではEJSおよびPugのHTMLファイル出力先が同じになりますので上書きにご注意ください。
 * 初期設定ではJavaScript（ECMAScript）およびTypeScriptのコンパイル出力先が同じになりますので上書きにご注意ください。
+* 初期設定ではSassのSCSS記法およびSASS記法のCSSファイル出力先が同じになりますので上書きにご注意ください。
 * 初期設定では〜IE11などのレガシーブラウザではページ表示時にアラートで警告が出るようになっています。
 
 
