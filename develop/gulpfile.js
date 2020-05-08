@@ -77,10 +77,30 @@ const taskEs = (done) => {
     done();
 }  
 
-// Sass
+// Sass(SCSS)
 sass.compiler = require('node-sass');
-const taskSass = () => 
+const taskScss = () => 
   src('src/scss/**/*.scss')
+    .pipe(plumber(
+      { errorHandler: notify.onError('Error: <%= error.message %>') }
+    ))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(postCSS([
+      autoprefixer(
+        { cascade: false, grid: "autoplace" }
+      )
+    ]))
+    .pipe(cleanCSS())
+    .pipe(rename(
+      { extname: '.min.css' }
+    ))
+    .pipe(sourcemaps.write('../maps'))
+    .pipe(dest('dist/assets/css'));
+
+// Sass(SASS)
+const taskSass = () => 
+  src('src/sass/**/*.sass')
     .pipe(plumber(
       { errorHandler: notify.onError('Error: <%= error.message %>') }
     ))
@@ -170,7 +190,8 @@ const taskWatch = (done) => {
   watch('dist/**/*', taskReload);
   watch('src/ts/**/*.ts', taskTs);
   watch('src/es/*.js', taskEs);
-  watch('src/scss/**/*.scss', taskSass);
+  watch('src/scss/**/*.scss', taskScss);
+  watch('src/sass/**/*.sass', taskSass);
   watch('src/pug/**/*.pug', taskPug);
   watch('src/ejs/**/*.ejs', taskEjs);
   watch('src/images/*', taskImagemin);
@@ -181,6 +202,7 @@ const taskWatch = (done) => {
 exports.server = taskServer;
 exports.ts = taskTs;
 exports.es = taskEs;
+exports.scss = taskScss;
 exports.sass = taskSass;
 exports.pug = taskPug;
 exports.ejs = taskEjs;

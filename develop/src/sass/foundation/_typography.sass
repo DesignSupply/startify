@@ -1,0 +1,85 @@
+@charset "UTF-8"
+
+/* ---------------------------
+ *  typography
+ * ---------------------------
+=typography-title($isMobile)
+  @if $isMobile
+    font-size: $font-XXXL
+    line-height: $line-height-catchcopy
+    letter-spacing: $letter-spacing-catchcopy
+    font-weight: bold
+  @else
+    font-size: $font-XXXXL
+    line-height: $line-height-title
+    letter-spacing: $letter-spacing-title
+    font-weight: bold
+=typography-catchcopy($isMobile)
+  @if $isMobile
+    font-size: $font-XXL
+    line-height: $line-height-subcatch
+    letter-spacing: $letter-spacing-subcatch
+    font-weight: bold
+  @else
+    font-size: $font-XXXL
+    line-height: $line-height-catchcopy
+    letter-spacing: $letter-spacing-catchcopy
+    font-weight: bold
+=typography-subcatch($isMobile)
+  @if $isMobile
+    font-size: $font-XL
+    line-height: $line-height-headline
+    letter-spacing: $letter-spacing-headline
+    font-weight: bold
+  @else
+    font-size: $font-XXL
+    line-height: $line-height-subcatch
+    letter-spacing: $letter-spacing-subcatch
+    font-weight: bold
+=typography-headline($isMobile)
+  @if $isMobile
+    font-size: $font-L
+    line-height: $line-height-leadcopy
+    letter-spacing: $letter-spacing-leadcopy
+    font-weight: bold
+  @else
+    font-size: $font-XL
+    line-height: $line-height-headline
+    letter-spacing: $letter-spacing-headline
+    font-weight: bold
+=typography-leadcopy($isMobile)
+  @if $isMobile
+    font-size: $font-M
+    line-height: $line-height-leadcopy
+    letter-spacing: $letter-spacing-leadcopy
+    font-weight: bold
+  @else
+    font-size: $font-L
+    line-height: $line-height-leadcopy
+    letter-spacing: $letter-spacing-leadcopy
+    font-weight: bold
+=typography-bodycopy($isMobile)
+  @if $isMobile
+    font-size: $font-S
+    line-height: $line-height-bodycopy
+    letter-spacing: $letter-spacing-bodycopy
+    font-weight: normal
+  @else
+    font-size: $font-R
+    line-height: $line-height-bodycopy
+    letter-spacing: $letter-spacing-bodycopy
+    font-weight: normal
+=typography-caption($isMobile)
+  @if $isMobile
+    font-size: $font-XS
+    line-height: $line-height-caption
+    letter-spacing: $letter-spacing-caption
+    font-weight: normal
+  @else
+    font-size: $font-XS
+    line-height: $line-height-caption
+    letter-spacing: $letter-spacing-caption $letter-spacing-caption
+    font-weight: normal
+@function responsive-font-size($target-font-size, $target-screen-size)
+  $view-width-ratio: $target-screen-size / 100
+  @return $target-font-size / $view-width-ratio * 1vw

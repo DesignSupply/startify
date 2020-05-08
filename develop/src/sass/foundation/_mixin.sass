@@ -1,0 +1,28 @@
+@charset "UTF-8"
+
+/* ---------------------------
+ *  media query
+ * ---------------------------
+=media-query($breakpoint-key)
+  @media #{map-get($breakpoint-list, $breakpoint-key)}
+    @content
+
+/* ---------------------------
+ *  hack
+ * ---------------------------
+=hack-ie11
+  @media all and (-ms-high-contrast: none)
+    *::-ms-backdrop, body
+      @content
+=hack-edge
+  @supports (-ms-ime-align: auto)
+    @content
+=hack-firefox
+  @-moz-document url-prefix()
+    @content
+=hack-chrome
+  @media screen and (-webkit-min-device-pixel-ratio: 0)
+    @content
+=hack-safari
+  _::-webkit-full-page-media, _:future, :root body
+    @content
