@@ -24,7 +24,7 @@ html {
   }
   @include media-query(xs) {
     body {
-      font-size: responsive-font-size(16,$screen-xs);
+      font-size: $font-S;
     }
   }
 }

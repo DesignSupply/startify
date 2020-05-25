@@ -19,7 +19,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: $default-color;
+  color: inherit;
 }
 @include media-query(sm) {
   p {
