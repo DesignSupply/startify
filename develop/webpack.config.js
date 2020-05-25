@@ -1,4 +1,5 @@
 module.exports = {
+  // mode: 'production',
   mode: 'development',
   entry: './src/ts/index.ts',
   output: {
@@ -10,12 +11,19 @@ module.exports = {
       {
         test: /\.ts$/,
         use: 'ts-loader'
+      },
+      {
+        test: /\.vue$/,
+        use: 'vue-loader'
       }
     ]
   },
   resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
     extensions: [
-      '.ts', '.js'
+      '.ts', '.js', '.vue'
     ]
   }
 }

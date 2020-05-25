@@ -43,8 +43,10 @@ const taskReload = (done) => {
 
 // webpack & TypeScript
 const taskTs = () => 
-  webpackStream(webpackConfig, webpack)
-    .pipe(dest('dist/assets/js'));
+  webpackStream(webpackConfig, webpack).on('error', function(e){
+    this.emit('end');
+  })
+  .pipe(dest('dist/assets/js'));
 
 // Browserify & Babel 
 const taskEs = (done) => {

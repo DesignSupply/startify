@@ -1,6 +1,7 @@
 'use strict';
 
 const $ = require('jQuery');
+const Vue = require('vue');
 
 // legacy browser alert
 const isLegacyIE = () => {
@@ -27,4 +28,22 @@ isLegacyIE();
 // jQuery
 $(function(){
   console.log('jQuery is ready.');
+});
+
+// Vue.js
+const vueModel = new Vue({
+  el: '#app',
+  data() {
+    return {
+      message: 'Vue.js is ready.'
+    }
+  },
+  created() {
+    this.showMessage();
+  },
+  methods: {
+    showMessage() {
+      console.log(this.message);
+    }
+  }
 });
