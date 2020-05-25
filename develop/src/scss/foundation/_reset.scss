@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* ---------------------------
-  global layout reset
---------------------------- */
+/* -------------------------------
+ *  global layout reset
+ * ---------------------------- */
 * {
   padding: 0;
   margin: 0;
@@ -41,9 +41,9 @@ body a {
   }
 }
 
-/* ---------------------------
-  element style reset
---------------------------- */
+/* -------------------------------
+ *  element style reset
+ * ---------------------------- */
 article,
 aside,
 details,
@@ -155,9 +155,9 @@ video {
   display: inline-block;
 }
 
-/* ---------------------------
-  form style reset
---------------------------- */
+/* -------------------------------
+ *  form style reset
+ * ---------------------------- */
 * {
   -webkit-appearance: none;
 }
@@ -256,9 +256,9 @@ input:-webkit-autofill {
   text-shadow: none;
 }
 
-/* ---------------------------
-  accessibility
---------------------------- */
+/* -------------------------------
+ *  accessibility
+ * ---------------------------- */
 @media screen {
   [hidden~="screen"] {
     display: inherit;
@@ -278,9 +278,9 @@ input:-webkit-autofill {
   cursor: not-allowed;
 }
 
-/* ---------------------------
-  animation reset
---------------------------- */
+/* -------------------------------
+ *  animation reset
+ * ---------------------------- */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -290,9 +290,9 @@ input:-webkit-autofill {
   }
 }
 
-/* ---------------------------
-  printing mode
---------------------------- */
+/* -------------------------------
+ *  printing mode
+ * ---------------------------- */
 @media print {
   html body {
     zoom: 65%;

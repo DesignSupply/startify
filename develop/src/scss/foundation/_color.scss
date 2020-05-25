@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* ---------------------------
-  color scheme
---------------------------- */
+/* -------------------------------
+ *  color scheme
+ * ---------------------------- */
 $color-base-1: #EEEEEE;
 $color-base-2: #C8C8C8;
 $color-base-3: #ACACAC;
@@ -30,9 +30,9 @@ $color-accent-6: #3F3F00;
 $color-white: #FFF;
 $color-black: #000;
 
-/* ---------------------------
-  UI color 
---------------------------- */
+/* -------------------------------
+ *  UI color 
+ * ---------------------------- */
 $ui-color-list: (
   error: #B00,
   warning: #DA0,
@@ -44,9 +44,9 @@ $ui-color-list: (
   @return #{map-get($ui-color-list, $ui-color-key)}
 }
 
-/* ---------------------------
-  SNS brand color
---------------------------- */
+/* -------------------------------
+ *  SNS brand color
+ * ---------------------------- */
 $sns-color-list: (
   facebook: #315096,
   twitter: #55acee,

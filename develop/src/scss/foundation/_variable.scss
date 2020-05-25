@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* ---------------------------
-  default style
---------------------------- */
+/* -------------------------------
+ *  default style
+ * ---------------------------- */
 $default-color: #333;
 $default-font-size: 1.6rem;
 $default-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic Medium", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
@@ -14,15 +14,15 @@ $default-text-shadow: 2px 2px 8px rgba(0,0,0,.5);
 $default-box-shadow: 0 2px 4px rgba(0,0,0,.25);
 $default-box-shadow-inner: 0 0 8px rgba(0,0,0,.25) inset;
 
-/* ---------------------------
-  hover style
---------------------------- */
+/* -------------------------------
+ *  hover style
+ * ---------------------------- */
 $hover-color: #999;
 $hover-box-shadow: 0 0 16px rgba(0,0,0,0.15);
 
-/* ---------------------------
-  screen size & breakpoint
---------------------------- */
+/* -------------------------------
+ *  screen size & breakpoint
+ * ---------------------------- */
 $screen-xxl: 1440;
 $screen-xl: 1280;
 $screen-lg: 992;
@@ -41,14 +41,14 @@ $breakpoint-list: (
   xxl: screen and (max-width: #{$screen-xxl}px)
 ) !default;
 
-/* ---------------------------
-  font family
---------------------------- */
+/* -------------------------------
+ *  font family
+ * ---------------------------- */
 $font-mincho: '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝', 'ＭＳ 明朝', serif;
 
-/* ---------------------------
-  space size
---------------------------- */
+/* -------------------------------
+ *  space size
+ * ---------------------------- */
 $space-XXXXL: 160px;
 $space-XXXL: 128px;
 $space-XXL: 96px;
@@ -61,9 +61,9 @@ $space-XS: 12px;
 $space-XXS: 8px;
 $space-XXXS: 4px;
 
-/* ---------------------------
-  font size
---------------------------- */
+/* -------------------------------
+ *  font size
+ * ---------------------------- */
 $font-XXXXL: 4.0rem;
 $font-XXXL: 3.2rem;
 $font-XXL: 2.8rem;
@@ -76,9 +76,9 @@ $font-XS: 1.2rem;
 $font-XXS: 1.0rem;
 $font-XXXS: 0.8rem;
 
-/* ---------------------------
-  line spacing
---------------------------- */
+/* -------------------------------
+ *  line spacing
+ * ---------------------------- */
 $line-height-caption: 1.75;
 $line-height-bodycopy: 1.75;
 $line-height-leadcopy: 1.84;
@@ -87,9 +87,9 @@ $line-height-subcatch: 1.6;
 $line-height-catchcopy: 1.5;
 $line-height-title: 1.4;
 
-/* ---------------------------
-  kerning
---------------------------- */
+/* -------------------------------
+ *  kerning
+ * ---------------------------- */
 $letter-spacing-caption: 0;
 $letter-spacing-bodycopy: 0;
 $letter-spacing-leadcopy: 0;

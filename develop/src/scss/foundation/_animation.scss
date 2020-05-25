@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
-/* ---------------------------
-  easing function
---------------------------- */
+/* -------------------------------
+ *  easing function
+ * ---------------------------- */
 
-/* -- config -------------- */
+/* -- config ------------------ */
 $transition-property: all;
 $transition-duration: 0.5s;
 $transition-delay: 0s;
 
-/* -- easing -------------- */
+/* -- easing ------------------ */
 $ease-linear:      $transition-property $transition-duration linear $transition-delay;
 $ease-ease:        $transition-property $transition-duration ease $transition-delay;
 $ease-in:          $transition-property $transition-duration ease-in $transition-delay;

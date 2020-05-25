@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /* -------------------------------
-  file import (Foundation)
-------------------------------- */
+ *  file import (Foundation)
+ * ---------------------------- */
 @import "foundation/variable";
 @import "foundation/fontface";
 @import "foundation/mixin";
@@ -12,28 +12,28 @@
 @import "foundation/reset";
 
 /* -------------------------------
-  file import (Layout)
-------------------------------- */
+ *  file import (Layout)
+ * ---------------------------- */
 @import "layout/layout";
 @import "layout/module";
 
 /* -------------------------------
-  file import (Object_Component)
-------------------------------- */
+ *  file import (Object_Component)
+ * ---------------------------- */
 @import "object/component/base";
 @import "object/component/parts";
 
 /* -------------------------------
-  file import (Object_Project)
-------------------------------- */
+ *  file import (Object_Project)
+ * ---------------------------- */
 @import "object/project/frontpage";
 @import "object/project/page";
 @import "object/project/archive";
 @import "object/project/single";
 
 /* -------------------------------
-  file import (Object_Utility)
-------------------------------- */
+ *  file import (Object_Utility)
+ * ---------------------------- */
 @import "object/utility/text";
 @import "object/utility/heading";
 @import "object/utility/button";

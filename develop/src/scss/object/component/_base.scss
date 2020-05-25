@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* ---------------------------
-  html elements
---------------------------- */
+/* -------------------------------
+ *  html elements
+ * ---------------------------- */
 noscript {
   background: #ff0;
   font-weight: bold;
@@ -31,9 +31,9 @@ img {
   height: auto;
 }
 
-/* ---------------------------
-  other settings
---------------------------- */
+/* -------------------------------
+ *  other settings
+ * ---------------------------- */
 .clearfix::after {
   display: block;
   clear: both;

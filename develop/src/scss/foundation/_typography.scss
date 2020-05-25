@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* ---------------------------
-  typography
---------------------------- */
+/* -------------------------------
+ *  typography
+ * ---------------------------- */
 @mixin typography-title($isMobile) {
   @if ($isMobile) {
     font-size: $font-XXXL;
