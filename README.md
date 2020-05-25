@@ -1,6 +1,6 @@
 # Startify
 
-Startifyはウェブサイトを作成するために必要なリソースがひととおり揃った開発環境です。フロントエンドの技術を使って、デザインから静的コーディングまでシンプルなウェブページをワンストップで効率よく作成できます。
+Startifyはウェブサイトを作成するために必要なリソースがひととおり揃った開発環境です。フロントエンドの技術を使って、デザインから静的コーディングまでシンプルなウェブページから、Vue.jsなどのJavaScriptライブラリを使ったウェブアプリケーションもワンストップで効率よく作成できます。
 
 
 
@@ -19,6 +19,7 @@ Startifyで主に出来ることは以下になります。
 * Babelを使ったJavaScript（ECMAScript）のトランスパイル
 * webpack環境でのTypeScriptのコンパイル
 * jQueryライブラリの使用（ECMAScript・TypeScript）
+* Vue.jsライブラリの使用（ECMAScript・TypeScript）
 * ソースコードのマッピングファイルの生成
 * CSS、JavaScriptファイルの自動minify化
 * 開発用ローカルサーバーの起動とBrowsersyncでの自動リロード
