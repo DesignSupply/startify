@@ -3,9 +3,9 @@
 /* -------------------------------
  *  easing transition
  * ---------------------------- */
-$transition-property: all;
-$transition-duration: 0.5s;
-$transition-delay: 0s;
+$transition-property: all !default;
+$transition-duration: 0.5s !default;
+$transition-delay: 0s !default;
 $easing-function-list: (
   linear: linear,
   ease: ease,

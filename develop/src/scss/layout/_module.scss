@@ -3,10 +3,10 @@
 /* -------------------------------
  *  config
  * ---------------------------- */
-$container-gutter: $space-XXS;
-$grid-gutter: $space-S;
-$grid-sidebar-min-width: auto;
-$grid-sidebar-max-width: 300px;
+$container-gutter: $space-XXS !default;
+$grid-gutter: $space-S !default;
+$grid-sidebar-min-width: auto !default;
+$grid-sidebar-max-width: 300px !default;
 
 /* -------------------------------
  *  gird system (container)
