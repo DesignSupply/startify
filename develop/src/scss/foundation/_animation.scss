@@ -1,41 +1,42 @@
 @charset "UTF-8";
 
 /* -------------------------------
- *  easing function
+ *  easing transition
  * ---------------------------- */
-
-/* -- config ------------------ */
 $transition-property: all;
 $transition-duration: 0.5s;
 $transition-delay: 0s;
-
-/* -- easing ------------------ */
-$ease-linear:      $transition-property $transition-duration linear $transition-delay;
-$ease-ease:        $transition-property $transition-duration ease $transition-delay;
-$ease-in:          $transition-property $transition-duration ease-in $transition-delay;
-$ease-out:         $transition-property $transition-duration ease-out $transition-delay;
-$ease-inout:       $transition-property $transition-duration ease-in-out $transition-delay;
-$ease-in-sine:     $transition-property $transition-duration cubic-bezier(0.47, 0, 0.745, 0.715) $transition-delay;
-$ease-out-sine:    $transition-property $transition-duration cubic-bezier(0.39, 0.575, 0.565, 1) $transition-delay;
-$ease-inout-sine:  $transition-property $transition-duration cubic-bezier(0.445, 0.05, 0.55, 0.95) $transition-delay;
-$ease-in-quad:     $transition-property $transition-duration cubic-bezier(0.55, 0.085, 0.68, 0.53) $transition-delay;
-$ease-out-quad:    $transition-property $transition-duration cubic-bezier(0.25, 0.46, 0.45, 0.94) $transition-delay;
-$ease-inout-quad:  $transition-property $transition-duration cubic-bezier(0.455, 0.03, 0.515, 0.955) $transition-delay;
-$ease-in-cubic:    $transition-property $transition-duration cubic-bezier(0.55, 0.055, 0.675, 0.19) $transition-delay;
-$ease-out-cubic:   $transition-property $transition-duration cubic-bezier(0.215, 0.61, 0.355, 1) $transition-delay;
-$ease-inout-cubic: $transition-property $transition-duration cubic-bezier(0.645, 0.045, 0.355, 1) $transition-delay;
-$ease-in-quart:    $transition-property $transition-duration cubic-bezier(0.895, 0.03, 0.685, 0.22) $transition-delay;
-$ease-out-quart:   $transition-property $transition-duration cubic-bezier(0.165, 0.84, 0.44, 1) $transition-delay;
-$ease-inout-quart: $transition-property $transition-duration cubic-bezier(0.77, 0, 0.175, 1) $transition-delay;
-$ease-in-quint:    $transition-property $transition-duration cubic-bezier(0.755, 0.05, 0.855, 0.06) $transition-delay;
-$ease-out-quint:   $transition-property $transition-duration cubic-bezier(0.23, 1, 0.32, 1) $transition-delay;
-$ease-inout-quint: $transition-property $transition-duration cubic-bezier(0.86, 0, 0.07, 1) $transition-delay;
-$ease-in-expo:     $transition-property $transition-duration cubic-bezier(0.95, 0.05, 0.795, 0.035) $transition-delay;
-$ease-out-expo:    $transition-property $transition-duration cubic-bezier(0.19, 1, 0.22, 1) $transition-delay;
-$ease-inout-expo:  $transition-property $transition-duration cubic-bezier(1, 0, 0, 1) $transition-delay;
-$ease-in-circ:     $transition-property $transition-duration cubic-bezier(0.6, 0.04, 0.98, 0.335) $transition-delay;
-$ease-out-circ:    $transition-property $transition-duration cubic-bezier(0.075, 0.82, 0.165, 1) $transition-delay;
-$ease-inout-circ:  $transition-property $transition-duration cubic-bezier(0.785, 0.135, 0.15, 0.86) $transition-delay;
-$ease-in-back:     $transition-property $transition-duration cubic-bezier(0.6, -0.28, 0.735, 0.045) $transition-delay;
-$ease-out-back:    $transition-property $transition-duration cubic-bezier(0.175, 0.885, 0.32, 1.275) $transition-delay;
-$ease-inout-back:  $transition-property $transition-duration cubic-bezier(0.68, -0.55, 0.265, 1.55) $transition-delay;
+$easing-function-list: (
+  linear: linear,
+  ease: ease,
+  ease-in: ease-in,
+  ease-out: ease-out,
+  ease-inout: ease-in-out,
+  ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715),
+  ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1),
+  ease-inout-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95),
+  ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53),
+  ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  ease-inout-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955),
+  ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19),
+  ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1),
+  ease-inout-cubic: cubic-bezier(0.645, 0.045, 0.355, 1),
+  ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22),
+  ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1),
+  ease-inout-quart: cubic-bezier(0.77, 0, 0.175, 1),
+  ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06),
+  ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1),
+  ease-inout-quint: cubic-bezier(0.86, 0, 0.07, 1),
+  ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035),
+  ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1),
+  ease-inout-expo: cubic-bezier(1, 0, 0, 1),
+  ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335),
+  ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1),
+  ease-inout-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86),
+  ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045),
+  ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  ease-inout-back: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+) !default;
+@function transition($easing-function-key) {
+  @return $transition-property $transition-duration #{map-get($easing-function-list, $easing-function-key)} $transition-delay
+}
