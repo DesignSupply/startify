@@ -13,6 +13,7 @@ Startifyで主に出来ることは以下になります。
 * テンプレートエンジン（EJS、Pug）を使ったHTMLマークアップと自動整形
 * テンプレートエンジン（EJS、Pug）内での外部JSONデータ読み込み
 * Sass（SCSS記法・SASS記法）のコンパイル
+* CSSLintでのCSSバリデーションチェック
 * デザインテンプレートのフォーマットに合わせたSass変数およびmixinの使用
 * Autoprefixerを使ったベンダープレフィックスの自動付与
 * Browserifyを使った外部スクリプトの読み込み
