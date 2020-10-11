@@ -11,6 +11,7 @@ const { src, dest, watch, parallel } = require("gulp"),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
   autoprefixer = require('autoprefixer'),
+  csslint = require('gulp-csslint'),
   postCSS = require('gulp-postcss'),
   cleanCSS = require('gulp-clean-css'),
   pug = require('gulp-pug'),
@@ -88,6 +89,8 @@ const taskScss = () =>
     ))
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(csslint('csslintrc.json'))
+    .pipe(csslint.formatter())
     .pipe(postCSS([
       autoprefixer(
         { cascade: false, grid: "autoplace" }
@@ -108,6 +111,8 @@ const taskSass = () =>
     ))
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(csslint('csslintrc.json'))
+    .pipe(csslint.formatter())
     .pipe(postCSS([
       autoprefixer(
         { cascade: false, grid: "autoplace" }
