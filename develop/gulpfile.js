@@ -89,7 +89,7 @@ const taskScss = () =>
     ))
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(csslint('csslintrc.json'))
+    .pipe(csslint('.csslintrc.json'))
     .pipe(csslint.formatter())
     .pipe(postCSS([
       autoprefixer(
@@ -111,7 +111,7 @@ const taskSass = () =>
     ))
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(csslint('csslintrc.json'))
+    .pipe(csslint('.csslintrc.json'))
     .pipe(csslint.formatter())
     .pipe(postCSS([
       autoprefixer(
