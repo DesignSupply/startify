@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2015
+  },
+  "rules": {
+    "no-console": "off",
+    "no-extra-semi": "warn",
+    "no-undef": "warn",
+    "quotes": [
+      "warn", "single"
+    ],
+    "space-before-blocks": [
+      "warn", { 
+        "functions": "always" 
+      }
+    ] 
+  }
+}

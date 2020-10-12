@@ -12,6 +12,7 @@ const { src, dest, watch, parallel } = require("gulp"),
   sass = require('gulp-sass'),
   autoprefixer = require('autoprefixer'),
   csslint = require('gulp-csslint'),
+  eslint = require('gulp-eslint'),
   postCSS = require('gulp-postcss'),
   cleanCSS = require('gulp-clean-css'),
   pug = require('gulp-pug'),
@@ -67,6 +68,11 @@ const taskEs = (done) => {
       { errorHandler: notify.onError('Error: <%= error.message %>') }
     ))
     .pipe(sourcemaps.init())
+    .pipe(eslint(
+      { useEslintrc: true }
+    ))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
     .pipe(babel(
       { presets: ['@babel/preset-env'] }
     ))
