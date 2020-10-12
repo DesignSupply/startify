@@ -14,11 +14,12 @@ Startifyで主に出来ることは以下になります。
 * テンプレートエンジン（EJS、Pug）内での外部JSONデータ読み込み
 * Sass（SCSS記法・SASS記法）のコンパイル
 * CSSLintでのCSSバリデーションチェック
+* ESLintでのJavaScript（ECMAScript）バリデーションチェック
 * デザインテンプレートのフォーマットに合わせたSass変数およびmixinの使用
 * Autoprefixerを使ったベンダープレフィックスの自動付与
 * Browserifyを使った外部スクリプトの読み込み
 * Babelを使ったJavaScript（ECMAScript）のトランスパイル
-* webpack環境でのTypeScriptのコンパイル
+* webpack環境でのTypeScriptのコンパイル（本番環境用・開発環境用）
 * jQueryライブラリの使用（ECMAScript・TypeScript）
 * Vue.jsライブラリの使用（ECMAScript・TypeScript）
 * ソースコードのマッピングファイルの生成
