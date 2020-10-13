@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel } = require("gulp"),
+const { src, dest, watch, parallel } = require('gulp'),
   browsersync = require('browser-sync').create(),
   plumber = require('gulp-plumber'),
   notify = require('gulp-notify'),
@@ -45,7 +45,7 @@ const taskReload = (done) => {
 
 // webpack & TypeScript
 const taskTs = () => 
-  webpackStream(webpackConfig, webpack).on('error', function(e){
+  webpackStream(webpackConfig, webpack).on('error', function(e) {
     this.emit('end');
   })
   .pipe(dest('dist/assets/js'));
@@ -99,7 +99,7 @@ const taskScss = () =>
     .pipe(csslint.formatter())
     .pipe(postCSS([
       autoprefixer(
-        { cascade: false, grid: "autoplace" }
+        { cascade: false, grid: 'autoplace' }
       )
     ]))
     .pipe(cleanCSS())
