@@ -10,6 +10,7 @@ const { src, dest, watch, parallel } = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
+  fibers = require('fibers'),
   autoprefixer = require('autoprefixer'),
   csslint = require('gulp-csslint'),
   eslint = require('gulp-eslint'),
@@ -87,14 +88,16 @@ const taskEs = (done) => {
 }  
 
 // Sass(SCSS)
-sass.compiler = require('node-sass');
+sass.compiler = require('sass');
 const taskScss = () => 
   src('src/scss/**/*.scss')
     .pipe(plumber(
       { errorHandler: notify.onError('Error: <%= error.message %>') }
     ))
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass(
+      { fiber: fibers }
+    ))
     .pipe(csslint('.csslintrc.json'))
     .pipe(csslint.formatter())
     .pipe(postCSS([
@@ -116,7 +119,9 @@ const taskSass = () =>
       { errorHandler: notify.onError('Error: <%= error.message %>') }
     ))
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass(
+      { fiber: fibers }
+    ))
     .pipe(csslint('.csslintrc.json'))
     .pipe(csslint.formatter())
     .pipe(postCSS([

@@ -31,14 +31,14 @@ $screen-sm: 544 !default;
 $screen-xs: 480 !default;
 $screen-xxs: 360 !default;
 $breakpoint-list: (
-  switch: screen and (max-width: #{$screen-md}px),
-  xxs: screen and (max-width: #{$screen-xxs}px),
-  xs: screen and (max-width: #{$screen-xs}px),
-  sm: screen and (max-width: #{$screen-sm}px),
-  md: screen and (max-width: #{$screen-md}px),
-  lg: screen and (max-width: #{$screen-lg}px),
-  xl: screen and (max-width: #{$screen-xl}px),
-  xxl: screen and (max-width: #{$screen-xxl}px)
+  switch: #{$screen-md}px,
+  xxs: #{$screen-xxs}px,
+  xs: #{$screen-xs}px,
+  sm: #{$screen-sm}px,
+  md: #{$screen-md}px,
+  lg: #{$screen-lg}px,
+  xl: #{$screen-xl}px,
+  xxl: #{$screen-xxl}px
 ) !default;
 
 /* -------------------------------

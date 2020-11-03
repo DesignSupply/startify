@@ -4,7 +4,7 @@
  *  media query
  * ---------------------------- */
 =media-query($breakpoint-key)
-  @media #{map-get($breakpoint-list, $breakpoint-key)}
+  @media (max-width: #{map-get($breakpoint-list, $breakpoint-key)})
     @content
 
 /* -------------------------------
