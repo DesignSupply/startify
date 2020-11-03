@@ -1,6 +1,6 @@
 {
   "name": "startify",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Development environment for website creation with design and static coding.",
   "main": "gulpfile.js",
   "scripts": {
