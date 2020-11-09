@@ -40,6 +40,11 @@ body a {
     font-family: Verdana, Meiryo, sans-serif;
   }
 }
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+}
 
 /* -------------------------------
  *  element style reset
