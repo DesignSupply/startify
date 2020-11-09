@@ -126,7 +126,7 @@ const taskSass = () =>
     .pipe(csslint.formatter())
     .pipe(postCSS([
       autoprefixer(
-        { cascade: false, grid: "autoplace" }
+        { cascade: false, grid: 'autoplace' }
       )
     ]))
     .pipe(cleanCSS())
