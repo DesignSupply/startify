@@ -1,3 +1,5 @@
+@use "../foundation/import" as f
+
 /* -------------------------------
  *  html body
  * ---------------------------- */
@@ -9,16 +11,16 @@ html
     width: inherit
     height: inherit
     min-height: 100vh
-    font-family: $default-font-family
-    font-size: $default-font-size
-    line-height: $default-line-height
-    color: $default-color
-  +media-query(sm)
+    font-family: f.$default-font-family
+    font-size: f.$default-font-size
+    line-height: f.$default-line-height
+    color: f.$default-color
+  +f.media-query(sm)
     body
-      font-size: responsive-font-size(16, $screen-sm)
-  +media-query(xs)
+      font-size: f.responsive-font-size(16, f.$screen-sm)
+  +f.media-query(xs)
     body
-      font-size: $font-S
+      font-size: f.$font-S
 
 /* -------------------------------
  *  base layout
@@ -62,3 +64,4 @@ $footer-max-height: auto
  *  aside
  * ---------------------------- */
 .l-aside
+  // add style
