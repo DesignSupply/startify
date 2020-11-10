@@ -1,3 +1,5 @@
+@use "../../foundation/import" as f;
+
 /* -------------------------------
  *  html elements
  * ---------------------------- */
@@ -11,7 +13,7 @@ noscript {
   width: 100%;
 }
 p:not(:last-child) {
-  margin: 0 0 $space-S 0;
+  margin: 0 0 f.$space-S 0;
 }
 a:link,
 a:visited,
@@ -19,7 +21,7 @@ a:hover,
 a:active {
   color: inherit;
 }
-@include media-query(sm) {
+@include f.media-query(sm) {
   p {
     text-align: justify;
   }

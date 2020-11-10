@@ -1,8 +1,10 @@
+@use "variable" as f-variable;
+
 /* -------------------------------
  *  media query
  * ---------------------------- */
 @mixin media-query($breakpoint-key) {
-  @media (max-width: #{map-get($breakpoint-list, $breakpoint-key)}) {
+  @media (max-width: #{map-get(f-variable.$breakpoint-list, $breakpoint-key)}) {
     @content;
   }
 }
