@@ -3,9 +3,15 @@
 /* -------------------------------
  *  media query
  * ---------------------------- */
-@mixin media-query($breakpoint-key) {
-  @media (max-width: #{map-get(f-variable.$breakpoint-list, $breakpoint-key)}) {
-    @content;
+@mixin media-query($breakpoint-key, $rule: max) {
+  @if $rule == max {
+    @media (max-width: #{map-get(f-variable.$breakpoint-list, $breakpoint-key)}) {
+      @content;
+    }  
+  } @else if $rule == min {
+    @media (min-width: calc(#{map-get(f-variable.$breakpoint-list, $breakpoint-key)}px + 1px)) {
+      @content;
+    }
   }
 }
 
