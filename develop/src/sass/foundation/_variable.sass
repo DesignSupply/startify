@@ -86,3 +86,10 @@ $letter-spacing-headline: 0.05rem !default
 $letter-spacing-subcatch: 0.05rem !default
 $letter-spacing-catchcopy: 0.1rem !default
 $letter-spacing-title: 0.2rem !default
+
+/* -------------------------------
+ *  layer order
+ * ---------------------------- */
+$layer-order-list: (fixed-content-default: 100, fixed-content-alert: 200, drawer-navi: 300, dialog: 400, loading-screen: 500) !default
+@function layer-order($layer-order-key)
+  @return #{map-get($layer-order-list, $layer-order-key)}
