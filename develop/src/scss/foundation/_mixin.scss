@@ -5,7 +5,7 @@
  * ---------------------------- */
 @mixin media-query($breakpoint-key, $rule: max) {
   @if $rule == max {
-    @media (max-width: #{map-get(f-variable.$breakpoint-list, $breakpoint-key)}) {
+    @media (max-width: #{map-get(f-variable.$breakpoint-list, $breakpoint-key)}px) {
       @content;
     }  
   } @else if $rule == min {
