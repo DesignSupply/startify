@@ -15,6 +15,7 @@ html {
     font-size: f.$default-font-size;
     line-height: f.$default-line-height;
     color: f.$default-color;
+    font-feature-settings: "palt";
   }
   @include f.media-query(sm) {
     body {
