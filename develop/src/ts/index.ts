@@ -29,7 +29,7 @@ const isLegacyIE = (): void | boolean => {
 isLegacyIE();
 
 // jQuery
-$(function(){
+$(function() {
   console.log('jQuery is ready.');
 });
 
