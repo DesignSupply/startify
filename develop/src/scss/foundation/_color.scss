@@ -24,23 +24,23 @@ $primary-color-list: (
   @return #{map-get($primary-color-list, $primary-color-key)}
 }
 $secondary-color-list: (
-  1: #FFD9FF,
-  2: #FF9AFF,
-  3: #FF59FF,
-  4: #FF00FF,
-  5: #C400C4,
-  6: #6E006E
-) !default;
-@function secondary-color($secondary-color-key) {
-  @return #{map-get($secondary-color-list, $secondary-color-key)}
-}
-$accent-color-list: (
   1: #FFFF8E,
   2: #FFFF00,
   3: #E5E500,
   4: #C3C300,
   5: #767600,
   6: #3F3F00
+) !default;
+@function secondary-color($secondary-color-key) {
+  @return #{map-get($secondary-color-list, $secondary-color-key)}
+}
+$accent-color-list: (
+  1: #FFD9FF,
+  2: #FF9AFF,
+  3: #FF59FF,
+  4: #FF00FF,
+  5: #C400C4,
+  6: #6E006E 
 ) !default;
 @function accent-color($accent-color-key) {
   @return #{map-get($accent-color-list, $accent-color-key)}
