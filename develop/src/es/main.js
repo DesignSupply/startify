@@ -3,9 +3,9 @@
 const $ = require('jQuery');
 const Vue = require('vue');
 
-// legacy browser alert
+// legacy IE browser alert
 const isLegacyIE = () => {
-  const targetUserAgent = navigator.userAgent,
+  const currentUserAgent = navigator.userAgent,
     notice = 'ご利用のウェブブラウザでは当サイトを正常に閲覧できません。ブラウザのバージョンを最新にして再度アクセスしてください。',
     targets = [ 
       'MSIE 6.0', // Internet Explorer 6
@@ -15,8 +15,8 @@ const isLegacyIE = () => {
       'MSIE 10.0', // Internet Explorer 10
       'Trident/7.0' // Internet Explorer 11
     ];
-    targets.forEach((target) => {
-    if(targetUserAgent.indexOf(target) != -1) {
+    Array.prototype.slice.call(targets).forEach((target) => {
+    if(currentUserAgent.indexOf(target) !== -1) {
       alert(notice);
     } else {
       return false;

@@ -6,9 +6,9 @@ import moduleFunction from './modules/module';
 
 console.log(moduleFunction('Hello World!'));
 
-// legacy browser alert
+// legacy IE browser alert
 const isLegacyIE = (): void | boolean => {
-  const targetUserAgent: string = navigator.userAgent,
+  const currentUserAgent: string = navigator.userAgent,
     notice: string = 'ご利用のウェブブラウザでは当サイトを正常に閲覧できません。ブラウザのバージョンを最新にして再度アクセスしてください。',
     targets: Array<string> = [ 
       'MSIE 6.0', // Internet Explorer 6
@@ -18,8 +18,8 @@ const isLegacyIE = (): void | boolean => {
       'MSIE 10.0', // Internet Explorer 10
       'Trident/7.0' // Internet Explorer 11
     ];
-    targets.forEach((target: string): void | boolean => {
-    if(targetUserAgent.indexOf(target) != -1) {
+    Array.prototype.slice.call(targets).forEach((target: string): void | boolean => {
+    if(currentUserAgent.indexOf(target) !== -1) {
       alert(notice);
     } else {
       return false;
