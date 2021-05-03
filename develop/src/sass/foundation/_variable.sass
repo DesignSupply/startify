@@ -95,3 +95,10 @@ $letter-spacing-title: 0.2rem !default
 $layer-order-list: (fixed-content-default: 100, fixed-content-alert: 200, drawer-navi: 300, dialog: 400, loading-screen: 500) !default
 @function layer-order($layer-order-key)
   @return #{map-get($layer-order-list, $layer-order-key)}
+
+/* -------------------------------
+ *  directory path
+ * ---------------------------- */
+$directory-path-list: (document-root: "/", images-directory: "assets/img/") !default
+@function directory-path($directory-path-key)
+  @return #{map-get($directory-path-list, $directory-path-key)}

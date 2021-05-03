@@ -11,10 +11,10 @@ html {
     width: inherit;
     height: inherit;
     min-height: 100vh;
-    font-family: f.$default-font-family;
-    font-size: f.$default-font-size;
-    line-height: f.$default-line-height;
-    color: f.$default-color;
+    font-family: var(--default-font-family);
+    font-size: var(--default-font-size);
+    line-height: var(--default-line-height);
+    color: var(--default-color);
     font-feature-settings: "palt";
   }
   @include f.media-query(sm) {
@@ -24,7 +24,7 @@ html {
   }
   @include f.media-query(xs) {
     body {
-      font-size: f.$font-S;
+      font-size: var(--font-S);
     }
   }
 }

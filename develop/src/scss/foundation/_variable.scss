@@ -111,3 +111,14 @@ $layer-order-list: (
 @function layer-order($layer-order-key) {
   @return #{map-get($layer-order-list, $layer-order-key)}
 }
+
+/* -------------------------------
+ *  directory path
+ * ---------------------------- */
+$directory-path-list: (
+  document-root: "/", 
+  images-directory: "assets/img/"
+) !default;
+@function directory-path($directory-path-key) {
+  @return #{map-get($directory-path-list, $directory-path-key)}
+}

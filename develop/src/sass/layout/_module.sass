@@ -3,8 +3,8 @@
 /* -------------------------------
  *  config
  * ---------------------------- */
-$container-gutter: f.$space-XXS !default
-$grid-gutter: f.$space-S !default
+$container-gutter: var(--space-XXS) !default
+$grid-gutter: var(--space-S) !default
 $grid-sidebar-min-width: auto !default
 $grid-sidebar-max-width: 300px !default
 
@@ -13,7 +13,7 @@ $grid-sidebar-max-width: 300px !default
  * ---------------------------- */
 .l-container
   width: 100%
-  max-width: #{f.$screen-xl}px
+  max-width: calc(var(--screen-xl) * 1px)
   margin: 0 auto
 .l-container-full
   width: 100%
@@ -21,13 +21,13 @@ $grid-sidebar-max-width: 300px !default
   margin: 0
 +f.media-query(xxl)
   .l-container
-    max-width: #{f.$screen-xl}px
+    max-width: calc(var(--screen-xl) * 1px)
 +f.media-query(xl)
   .l-container
-    max-width: #{f.$screen-lg}px
+    max-width: calc(var(--screen-lg) * 1px)
 +f.media-query(lg)
   .l-container
-    max-width: #{f.$screen-md}px
+    max-width: calc(var(--screen-md) * 1px)
 +f.media-query(md)
   .l-container
     max-width: 100%

@@ -13,7 +13,7 @@ noscript {
   width: 100%;
 }
 p:not(:last-child) {
-  margin: 0 0 f.$space-S 0;
+  margin: 0 0 var(--space-S) 0;
 }
 a:link,
 a:visited,
