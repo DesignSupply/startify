@@ -49,6 +49,16 @@ $color-white: #FFF !default;
 $color-black: #000 !default;
 
 /* -------------------------------
+ *  gradation color 
+ * ---------------------------- */
+@function linear-gradation-color($angle: 0deg, $start-color: white, $end-color: black) {
+  @return linear-gradient($angle, $start-color 0%, $end-color 100%);
+}  
+@function radial-gradation-color($start-color: white, $end-color: black, $option: circle farthest-corner at center) {
+  @return radial-gradient($option, $start-color 0%, $end-color 100%);
+}
+
+/* -------------------------------
  *  UI color 
  * ---------------------------- */
 $ui-color-list: (
