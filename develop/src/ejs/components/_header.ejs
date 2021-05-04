@@ -39,7 +39,7 @@
     <link rel="apple-touch-icon" href="assets/img/icon/******.png">
     <link rel="icon" sizes="192x192" href="assets/img/icon/******-192x192.png">
     <link rel="icon" href="favicon.ico">
-    <link rel="canonical" href="">
+    <link rel="canonical" href="<%= global.siteUrl %><%= pageMeta.path %>">
     <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
     <% if(isFrontPage) { %>
       <title><%= global.siteName %></title>
@@ -49,21 +49,23 @@
   </head>
   <body class="<%= className.body %>">
     <noscript>※当ウェブサイトを快適に閲覧して頂くためjavascriptを有効にしてください</noscript>
-    <div class="l-base" id="app">
-      <header class="l-header <%= className.header %>">
-        <section class="l-wrapper">
-          <div class="l-container">
-            <div class="__inner-depth-1">
-              <div class="__inner-depth-2">
-                <div class="__inner-depth-3">
-                  <div class="__inner-depth-4">
-                    <div class="__inner-depth-5">
+    <div id="app">
+      <div class="l-base">
+        <header class="l-header <%= className.header %>">
+          <section class="l-wrapper">
+            <div class="l-container">
+              <div class="l-inner">
+                <div class="__block-depth-1">
+                  <div class="__block-depth-2">
+                    <div class="__block-depth-3">
+                      <div class="__block-depth-4">
+                        <div class="__block-depth-5"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </header>
-      <!-- header end -->
+          </section>
+        </header>
+        <!-- header end -->
