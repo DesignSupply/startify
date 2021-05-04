@@ -1,7 +1,6 @@
-doctype html
-
 block variables
 
+doctype html
 html(lang="ja")
   head
     meta(charset="utf-8")
@@ -33,20 +32,21 @@ html(lang="ja")
     link(rel="apple-touch-icon" href="assets/img/icon/******.png")
     link(rel="icon" sizes="192x192" href="assets/img/icon/******-192x192.png")
     link(rel="icon" href="favicon.ico")
-    link(rel="canonical" href="")
     link(rel="stylesheet" href="assets/css/main.min.css")
 
     block pageMeta
 
   body(class=bodyClass)
     noscript ※当ウェブサイトを快適に閲覧して頂くためjavascriptを有効にしてください
-    div.l-base#app
-      include ../components/_header.pug
+    div#app
+      div.l-base
+        include ../components/_header.pug
 
-      block pageContent
+        block pageContent
 
-      include ../components/_footer.pug
-    // base end 
+        include ../components/_footer.pug
+      // base end 
+    // app end 
     include ../components/_external.pug
     // Global site tag (gtag.js) - Google Analytics 
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-**************")

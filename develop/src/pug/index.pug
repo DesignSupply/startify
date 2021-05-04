@@ -19,6 +19,7 @@ block append pageMeta
     meta(name="twitter:description" content=meta.description)
     meta(name="twitter:url" content=siteInfo.siteUrl + meta.path)
     meta(name="description" content=meta.description)
+    link(rel="canonical" href=siteInfo.siteUrl + meta.path)
     if isFrontPage
       title #{siteInfo.siteName}
     else
@@ -29,56 +30,62 @@ block pageContent
         article.p-section-01
           section.l-wrapper
             div.l-container
-              div.__inner-depth-1
-                div.__inner-depth-2
-                  div.__inner-depth-3
-                    div.__inner-depth-4
-                      div.__inner-depth-5
+              div.l-inner
+                div.__block-depth-1
+                  div.__block-depth-2
+                    div.__block-depth-3
+                      div.__block-depth-4
+                        div.__block-depth-5
         // section 01 end 
         article.p-section-02
           section.l-wrapper
             div.l-container
-              div.__inner-depth-1
-                div.__inner-depth-2
-                  div.__inner-depth-3
-                    div.__inner-depth-4
-                      div.__inner-depth-5
+              div.l-inner
+                div.__block-depth-1
+                  div.__block-depth-2
+                    div.__block-depth-3
+                      div.__block-depth-4
+                        div.__block-depth-5
         // section 02 end 
         article.p-section-03
           section.l-wrapper
             div.l-container
-              div.__inner-depth-1
-                div.__inner-depth-2
-                  div.__inner-depth-3
-                    div.__inner-depth-4
-                      div.__inner-depth-5
+              div.l-inner
+                div.__block-depth-1
+                  div.__block-depth-2
+                    div.__block-depth-3
+                      div.__block-depth-4
+                        div.__block-depth-5
         // section 03 end 
         article.p-section-04
           section.l-wrapper
             div.l-container
-              div.__inner-depth-1
-                div.__inner-depth-2
-                  div.__inner-depth-3
-                    div.__inner-depth-4
-                      div.__inner-depth-5
+              div.l-inner
+                div.__block-depth-1
+                  div.__block-depth-2
+                    div.__block-depth-3
+                      div.__block-depth-4
+                        div.__block-depth-5
         // section 04 end 
         article.p-section-05
           section.l-wrapper
             div.l-container
-              div.__inner-depth-1
-                div.__inner-depth-2
-                  div.__inner-depth-3
-                    div.__inner-depth-4
-                      div.__inner-depth-5
+              div.l-inner
+                div.__block-depth-1
+                  div.__block-depth-2
+                    div.__block-depth-3
+                      div.__block-depth-4
+                        div.__block-depth-5
         // section 05 end 
         aside.l-aside
           section.l-wrapper
             div.l-container
-              div.__inner-depth-1
-                div.__inner-depth-2
-                  div.__inner-depth-3
-                    div.__inner-depth-4
-                      div.__inner-depth-5
+              div.l-inner
+                div.__block-depth-1
+                  div.__block-depth-2
+                    div.__block-depth-3
+                      div.__block-depth-4
+                        div.__block-depth-5
         // aside end 
       // main end 
 

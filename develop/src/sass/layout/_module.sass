@@ -3,10 +3,18 @@
 /* -------------------------------
  *  config
  * ---------------------------- */
-$container-gutter: var(--space-XXS) !default
-$grid-gutter: var(--space-S) !default
+$container-gutter: var(--space-XS) !default
+$grid-gutter: var(--space-R) !default
 $grid-sidebar-min-width: auto !default
 $grid-sidebar-max-width: 300px !default
+
+/* -------------------------------
+ *  container wrapper & inner
+ * ---------------------------- */
+.l-wrapper
+  width: 100%
+.l-inner
+  padding: 0 $container-gutter 
 
 /* -------------------------------
  *  gird system (container)
@@ -44,12 +52,10 @@ $grid-sidebar-max-width: 300px !default
 /* -------------------------------
  *  gird system (flexbox)
  * ---------------------------- */
-.l-flex-layout
+.l-flex-container
   display: flex
   justify-content: space-between
   flex-wrap: wrap
-  padding: 0 $container-gutter
-  // margin: 0 calc(-1 * #{$container-gutter});
   .l-flex-item
     padding: 0 $container-gutter
     flex-basis: auto
@@ -59,60 +65,47 @@ $grid-sidebar-max-width: 300px !default
     &.__no-gutter
       padding: 0
     &.__col-1
-      flex-basis: 8.3333%
-      max-width: 8.3333%
+      width: 8.3333%
     &.__col-2
-      flex-basis: 16.6666%
-      max-width: 16.6666%
+      width: 16.6666%
     &.__col-3, &.__quad
-      flex-basis: 25%
-      max-width: 25%
+      width: 25%
     &.__col-4
-      flex-basis: 33.3333%
-      max-width: 33.3333%
+      width: 33.3333%
     &.__col-5
-      flex-basis: 41.6666%
-      max-width: 41.6666%
+      width: 41.6666%
     &.__col-6, &.__half
-      flex-basis: 50%
-      max-width: 50%
+      width: 50%
     &.__col-7
-      flex-basis: 58.3333%
-      max-width: 58.3333%
+      width: 58.3333%
     &.__col-8
-      flex-basis: 66.6666%
-      max-width: 66.6666%
+      width: 66.6666%
     &.__col-9, &.__quad-of-3
-      flex-basis: 75%
-      max-width: 75%
+      width: 75%
     &.__col-10
-      flex-basis: 83.3333%
-      max-width: 83.3333%
+      width: 83.3333%
     &.__col-11
-      flex-basis: 91.6666%
-      max-width: 91.6666%
+      width: 91.6666%
     &.__col-12
-      flex-basis: 100%
-      max-width: 100%
+      width: 100%
     +f.media-query(switch)
       &.__col-1,
       &.__col-2,
-      &.__col-3, &.__quad,
+      &.__col-3,&.__quad,
       &.__col-4,
       &.__col-5,
-      &.__col-6, &.__half,
+      &.__col-6,&.__half,
       &.__col-7,
       &.__col-8,
-      &.__col-9, &.__quad-of-3,
+      &.__col-9,&.__quad-of-3,
       &.__col-10,
       &.__col-11
-        flex-basis: 100%
-        max-width: 100%
+        width: 100%
 
 /* -------------------------------
  *  gird system (grid layout)
  * ---------------------------- */
-.l-grid-layout
+.l-grid-container
   display: grid
   padding: 0 calc(#{$container-gutter} * 2)
   &.__col-quad
