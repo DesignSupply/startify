@@ -2,6 +2,8 @@
 
 Startifyはウェブサイトを作成するために必要なリソースがひととおり揃った静的コーディングの開発環境です。デザインから静的コーディングまでシンプルなウェブページから、jQueryやVue.jsなどのJavaScriptのライブラリやフレームワークを使ったウェブアプリケーションもワンストップで、タスクランナーのGulpを使って効率よく作成できます。
 
+webpackをベースにした[「Startify2」はこちらから](https://github.com/DesignSupply/startify2 "Startify2") ※以降のアップデートはこちらがメインに実施予定です
+
 
 
 ## Features
