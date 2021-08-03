@@ -82,7 +82,7 @@ const taskEs = (done) => {
     .pipe(rename(
       { extname: '.min.js' }
     ))
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('../js'))
     .pipe(dest('dist/assets/js'));
     done();
 }  
@@ -109,7 +109,7 @@ const taskScss = () =>
     .pipe(rename(
       { extname: '.min.css' }
     ))
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('../css'))
     .pipe(dest('dist/assets/css'));
 
 // Sass(SASS)
@@ -133,7 +133,7 @@ const taskSass = () =>
     .pipe(rename(
       { extname: '.min.css' }
     ))
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('../css'))
     .pipe(dest('dist/assets/css'));
 
 // Pug
