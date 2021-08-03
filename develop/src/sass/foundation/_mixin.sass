@@ -3,13 +3,45 @@
 /* -------------------------------
  *  media query
  * ---------------------------- */
-=media-query($breakpoint-key, $rule: max)
-  @if $rule == max
+=media-query($breakpoint-key, $rule: max-width)
+  @if $rule == max-width
     @media (max-width: #{map-get(f-variable.$breakpoint-list, $breakpoint-key)}px)
       @content
-  @else if $rule == min
+  @else if $rule == min-width
     @media (min-width: calc(#{map-get(f-variable.$breakpoint-list, $breakpoint-key)}px + 1px))
       @content
+
+/* -------------------------------
+ *  hover & focus
+ * ---------------------------- */
+=hover-style($disabled: false)
+  @media (hover: hover) and (pointer: fine)
+    &:hover
+      @content
+  @if $disabled
+    &:hover
+      @content
+=focus-style
+  &:focus
+    @content
+
+/* -------------------------------
+ *  screen reader
+ * ---------------------------- */    
+=screen-reader-style
+  position: absolute
+  clip: rect(1px, 1px, 1px, 1px)
+  left: -9999px
+  top: -9999px       
+
+/* -------------------------------
+ *  clearfix
+ * ---------------------------- */  
+=clearfix
+  &::after
+    content: ""
+    clear: both
+    display: block
 
 /* -------------------------------
  *  hack

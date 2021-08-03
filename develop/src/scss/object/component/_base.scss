@@ -34,14 +34,3 @@ img {
 /* -------------------------------
  *  other settings
  * ---------------------------- */
-.clearfix::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-.screen-reader-only {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  left: -9999px;
-  top: -9999px;
-}
