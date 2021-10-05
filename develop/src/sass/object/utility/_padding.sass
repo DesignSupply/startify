@@ -1,6 +1,8 @@
+@use "sass:math" as *
+
 /* -------------------------------
  *  padding
- * ---------------------------- */      
+ * ---------------------------- */
 
 /* -- config ------------------ */
 $unit-8: 8 !default
@@ -45,10 +47,10 @@ $unit-32: 32 !default
 @for $i from 0 through 10
   @if $i < 2
     .pdt-00#{$i * $unit-8}
-      padding-top: #{$i * $unit-8 / 10}px !important
+      padding-top: #{div($i * $unit-8, 10)}px !important
   @else if $i < 4
     .pdt-0#{$i * $unit-8}
-      padding-top: #{$i * $unit-8 / 10}px !important
+      padding-top: #{div($i * $unit-8, 10)}px !important
   @else if $i < 7
     .pdt-0#{($i - 2) * $unit-16}
       padding-top: #{($i - 2) * $unit-16}px !important

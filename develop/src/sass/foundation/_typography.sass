@@ -1,85 +1,86 @@
-@use "variable" as f-variable
+@use "sass:math" as *
+@use "variable" as *
 
 /* -------------------------------
  *  typography
  * ---------------------------- */
-=typography-title($isMobile)
-  @if $isMobile
-    font-size: f-variable.$font-XXXL
-    line-height: f-variable.$line-height-catchcopy
-    letter-spacing: f-variable.$letter-spacing-catchcopy
+=typography-title($device: desktop)
+  @if $device == mobile
+    font-size: $font-XXXL
+    line-height: $line-height-catchcopy
+    letter-spacing: $letter-spacing-catchcopy
     font-weight: bold
-  @else
-    font-size: f-variable.$font-XXXXL
-    line-height: f-variable.$line-height-title
-    letter-spacing: f-variable.$letter-spacing-title
+  @else if $device == desktop
+    font-size: $font-XXXXL
+    line-height: $line-height-title
+    letter-spacing: $letter-spacing-title
     font-weight: bold
-=typography-catchcopy($isMobile)
-  @if $isMobile
-    font-size: f-variable.$font-XXL
-    line-height: f-variable.$line-height-subcatch
-    letter-spacing: f-variable.$letter-spacing-subcatch
+=typography-catchcopy($device: desktop)
+  @if $device == mobile
+    font-size: $font-XXL
+    line-height: $line-height-subcatch
+    letter-spacing: $letter-spacing-subcatch
     font-weight: bold
-  @else
-    font-size: f-variable.$font-XXXL
-    line-height: f-variable.$line-height-catchcopy
-    letter-spacing: f-variable.$letter-spacing-catchcopy
+  @else if $device == desktop
+    font-size: $font-XXXL
+    line-height: $line-height-catchcopy
+    letter-spacing: $letter-spacing-catchcopy
     font-weight: bold
-=typography-subcatch($isMobile)
-  @if $isMobile
-    font-size: f-variable.$font-XL
-    line-height: f-variable.$line-height-headline
-    letter-spacing: f-variable.$letter-spacing-headline
+=typography-subcatch($device: desktop)
+  @if $device == mobile
+    font-size: $font-XL
+    line-height: $line-height-headline
+    letter-spacing: $letter-spacing-headline
     font-weight: bold
-  @else
-    font-size: f-variable.$font-XXL
-    line-height: f-variable.$line-height-subcatch
-    letter-spacing: f-variable.$letter-spacing-subcatch
+  @else if $device == desktop
+    font-size: $font-XXL
+    line-height: $line-height-subcatch
+    letter-spacing: $letter-spacing-subcatch
     font-weight: bold
-=typography-headline($isMobile)
-  @if $isMobile
-    font-size: f-variable.$font-L
-    line-height: f-variable.$line-height-leadcopy
-    letter-spacing: f-variable.$letter-spacing-leadcopy
+=typography-headline($device: desktop)
+  @if $device == mobile
+    font-size: $font-L
+    line-height: $line-height-leadcopy
+    letter-spacing: $letter-spacing-leadcopy
     font-weight: bold
-  @else
-    font-size: f-variable.$font-XL
-    line-height: f-variable.$line-height-headline
-    letter-spacing: f-variable.$letter-spacing-headline
+  @else if $device == desktop
+    font-size: $font-XL
+    line-height: $line-height-headline
+    letter-spacing: $letter-spacing-headline
     font-weight: bold
-=typography-leadcopy($isMobile)
-  @if $isMobile
-    font-size: f-variable.$font-M
-    line-height: f-variable.$line-height-leadcopy
-    letter-spacing: f-variable.$letter-spacing-leadcopy
+=typography-leadcopy($device: desktop)
+  @if $device == mobile
+    font-size: $font-M
+    line-height: $line-height-leadcopy
+    letter-spacing: $letter-spacing-leadcopy
     font-weight: bold
-  @else
-    font-size: f-variable.$font-L
-    line-height: f-variable.$line-height-leadcopy
-    letter-spacing: f-variable.$letter-spacing-leadcopy
+  @else if $device == desktop
+    font-size: $font-L
+    line-height: $line-height-leadcopy
+    letter-spacing: $letter-spacing-leadcopy
     font-weight: bold
-=typography-bodycopy($isMobile)
-  @if $isMobile
-    font-size: f-variable.$font-S
-    line-height: f-variable.$line-height-bodycopy
-    letter-spacing: f-variable.$letter-spacing-bodycopy
+=typography-bodycopy($device: desktop)
+  @if $device == mobile
+    font-size: $font-S
+    line-height: $line-height-bodycopy
+    letter-spacing: $letter-spacing-bodycopy
     font-weight: normal
-  @else
-    font-size: f-variable.$font-R
-    line-height: f-variable.$line-height-bodycopy
-    letter-spacing: f-variable.$letter-spacing-bodycopy
+  @else if $device == desktop
+    font-size: $font-R
+    line-height: $line-height-bodycopy
+    letter-spacing: $letter-spacing-bodycopy
     font-weight: normal
-=typography-caption($isMobile)
-  @if $isMobile
-    font-size: f-variable.$font-XS
-    line-height: f-variable.$line-height-caption
-    letter-spacing: f-variable.$letter-spacing-caption
+=typography-caption($device: desktop)
+  @if $device == mobile
+    font-size: $font-XS
+    line-height: $line-height-caption
+    letter-spacing: $letter-spacing-caption
     font-weight: normal
-  @else
-    font-size: f-variable.$font-XS
-    line-height: f-variable.$line-height-caption
-    letter-spacing: f-variable.$letter-spacing-caption $letter-spacing-caption
+  @else if $device == desktop
+    font-size: $font-XS
+    line-height: $line-height-caption
+    letter-spacing: $letter-spacing-caption
     font-weight: normal
 @function responsive-font-size($target-font-size, $target-screen-size)
-  $view-width-ratio: $target-screen-size / 100
-  @return $target-font-size / $view-width-ratio * 1vw
+  $view-width-ratio: div($target-screen-size, 100)
+  @return div($target-font-size, $view-width-ratio) * 1vw

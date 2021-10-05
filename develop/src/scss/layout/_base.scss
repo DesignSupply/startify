@@ -1,4 +1,4 @@
-@use "../foundation/import" as f;
+@use "../foundation/import" as *;
 
 /* -------------------------------
  *  html body
@@ -17,12 +17,12 @@ html {
     color: var(--default-color);
     font-feature-settings: "palt";
   }
-  @include f.media-query(sm) {
+  @include media-query(sm) {
     body {
-      font-size: f.responsive-font-size(16, f.$screen-sm);
+      font-size: responsive-font-size(16, $screen-sm);
     }
   }
-  @include f.media-query(xs) {
+  @include media-query(xs) {
     body {
       font-size: var(--font-S);
     }
@@ -52,32 +52,4 @@ $footer-max-height: auto;
     "main" 1fr
     "footer" minmax($footer-min-height, $footer-max-height)
     / 100%;
-}
-
-/* -------------------------------
- *  header
- * ---------------------------- */
-.l-header {
-  grid-area: header;
-}
-
-/* -------------------------------
- *  footer
- * ---------------------------- */
-.l-footer {
-  grid-area: footer;
-}
-
-/* -------------------------------
- *  main
- * ---------------------------- */
-.l-main {
-  grid-area: main;
-}
-
-/* -------------------------------
- *  aside
- * ---------------------------- */
-.l-aside {
-  // add style
 }

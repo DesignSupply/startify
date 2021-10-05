@@ -1,3 +1,5 @@
+@use "sass:math" as *;
+
 /* -------------------------------
  *  margin
  * ---------------------------- */
@@ -37,9 +39,9 @@ $unit-32: 32 !default;
 }
 @for $i from 0 through 10 {
   @if $i < 2 {
-    .mgt-00#{$i * $unit-8} { margin-top: #{$i * $unit-8 / 10}px !important; }
+    .mgt-00#{$i * $unit-8} { margin-top: #{div($i * $unit-8, 10)}px !important; }
   } @else if $i < 4 {
-    .mgt-0#{$i * $unit-8} { margin-top: #{$i * $unit-8 / 10}px !important; }
+    .mgt-0#{$i * $unit-8} { margin-top: #{div($i * $unit-8, 10)}px !important; }
   } @else if $i < 7 {
     .mgt-0#{($i - 2) * $unit-16} { margin-top: #{($i - 2) * $unit-16}px !important; }
   } @else if $i < 8 {

@@ -1,4 +1,4 @@
-@use "../foundation/import" as f;
+@use "../foundation/import" as *;
 
 /* -------------------------------
  *  config
@@ -31,37 +31,37 @@ $grid-sidebar-max-width: 300px !default;
   max-width: 100%;
   margin: 0;
 }
-@include f.media-query(xxl) {
+@include media-query(xxl) {
   .l-container {
     max-width: calc(var(--screen-xl) * 1px);
   }
 }
-@include f.media-query(xl) {
+@include media-query(xl) {
   .l-container {
     max-width: calc(var(--screen-lg) * 1px);
   }
 }
-@include f.media-query(lg) {
+@include media-query(lg) {
   .l-container {
     max-width: calc(var(--screen-md) * 1px);
   }
 }
-@include f.media-query(md) {
+@include media-query(md) {
   .l-container {
     max-width: 100%;
   }
 }
-@include f.media-query(sm) {
+@include media-query(sm) {
   .l-container {
     max-width: 100%;
   }
 }
-@include f.media-query(xs) {
+@include media-query(xs) {
   .l-container {
     max-width: 100%;
   }
 }
-@include f.media-query(xxs) {
+@include media-query(xxs) {
   .l-container {
     max-width: 100%;
   }
@@ -95,7 +95,7 @@ $grid-sidebar-max-width: 300px !default;
     &.__col-10 { width: 83.3333%; }
     &.__col-11 { width: 91.6666%; }
     &.__col-12 { width: 100%; }
-    @include f.media-query(switch) {
+    @include media-query(switch) {
       &.__col-1,
       &.__col-2,
       &.__col-3,&.__quad,
@@ -140,7 +140,7 @@ $grid-sidebar-max-width: 300px !default;
     grid-template: auto / 1fr minmax($grid-sidebar-min-width, $grid-sidebar-max-width);
     grid-gap: $grid-gutter;
   }
-  @include f.media-query(switch) {
+  @include media-query(switch) {
     &.__col-quad,
     &.__col-triple,
     &.__col-double,

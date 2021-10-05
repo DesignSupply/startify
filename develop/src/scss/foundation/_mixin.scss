@@ -1,15 +1,15 @@
-@use "variable" as f-variable;
+@use "variable" as *;
 
 /* -------------------------------
  *  media query
  * ---------------------------- */
 @mixin media-query($breakpoint-key, $rule: max-width) {
   @if $rule == max-width {
-    @media (max-width: #{map-get(f-variable.$breakpoint-list, $breakpoint-key)}px) {
+    @media (max-width: #{map-get($breakpoint-list, $breakpoint-key)}px) {
       @content;
     }  
   } @else if $rule == min-width {
-    @media (min-width: calc(#{map-get(f-variable.$breakpoint-list, $breakpoint-key)}px + 1px)) {
+    @media (min-width: calc(#{map-get($breakpoint-list, $breakpoint-key)}px + 1px)) {
       @content;
     }
   }
@@ -82,8 +82,8 @@
     @content;
   }
 }
-@mixin hack-safari {
-  _::-webkit-full-page-media, _:future, :root body {
+@mixin hack-safari($selecter: "*.hack-safari") {
+  _::-webkit-full-page-media, _:future, :root #{$selecter} {
     @content;
   }
 }

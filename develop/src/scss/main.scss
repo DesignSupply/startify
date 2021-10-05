@@ -6,13 +6,16 @@
 /* -------------------------------
  *  file import (Layout)
  * ---------------------------- */
-@use "layout/layout";
+@use "layout/base";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/content";
 @use "layout/module";
 
 /* -------------------------------
  *  file import (Object_Component)
  * ---------------------------- */
-@use "object/component/base";
+@use "object/component/common";
 @use "object/component/parts";
 
 /* -------------------------------

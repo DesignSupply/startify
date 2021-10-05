@@ -1,158 +1,185 @@
-@use "variable" as f-variable
-@use "color" as f-color
-@use "animation" as f-animation
+@use "variable" as *
+@use "color" as *
+@use "animation" as *
 
 /* -------------------------------
  *  css custom properties
  * ---------------------------- */
 :root
   // default style
-  --default-color: #{f-variable.$default-color}
-  --default-font-size: #{f-variable.$default-font-size}
-  --default-font-family: #{f-variable.$default-font-family}
-  --default-line-height: #{f-variable.$default-line-height}
-  --default-letter-spacing: #{f-variable.$default-letter-spacing}
-  --default-border-radius: #{f-variable.$default-border-radius}
-  --default-transition: #{f-variable.$default-transition}
-  --default-text-shadow: #{f-variable.$default-text-shadow}
-  --default-box-shadow: #{f-variable.$default-box-shadow}
-  --default-box-shadow-inner: #{f-variable.$default-box-shadow-inner}
+  --default-color: #{$default-color}
+  --default-font-size: #{$default-font-size}
+  --default-font-family: #{$default-font-family}
+  --default-line-height: #{$default-line-height}
+  --default-letter-spacing: #{$default-letter-spacing}
+  --default-border-radius: #{$default-border-radius}
+  --default-transition: #{$default-transition}
+  --default-text-shadow: #{$default-text-shadow}
+  --default-box-shadow: #{$default-box-shadow}
+  --default-box-shadow-inner: #{$default-box-shadow-inner}
   // hover style
-  --hover-color: #{f-variable.$hover-color}
-  --hover-box-shadow: #{f-variable.$hover-box-shadow}
+  --hover-color: #{$hover-color}
+  --hover-box-shadow: #{$hover-box-shadow}
   // screen size & breakpoint
-  --screen-xxl: #{f-variable.$screen-xxl}
-  --screen-xl: #{f-variable.$screen-xl}
-  --screen-lg: #{f-variable.$screen-lg}
-  --screen-md: #{f-variable.$screen-md}
-  --screen-sm: #{f-variable.$screen-sm}
-  --screen-xs: #{f-variable.$screen-xs}
-  --screen-xxs: #{f-variable.$screen-xxs}
+  --screen-xxl: #{$screen-xxl}
+  --screen-xl: #{$screen-xl}
+  --screen-lg: #{$screen-lg}
+  --screen-md: #{$screen-md}
+  --screen-sm: #{$screen-sm}
+  --screen-xs: #{$screen-xs}
+  --screen-xxs: #{$screen-xxs}
   // font family
-  --font-sans-serif: #{f-variable.$font-sans-serif}
-  --font-serif: #{f-variable.$font-serif}
-  --font-monospace: #{f-variable.$font-serif}
+  --font-sans-serif: #{$font-sans-serif}
+  --font-serif: #{$font-serif}
+  --font-monospace: #{$font-serif}
   // space size
-  --space-XXXXL: #{f-variable.$space-XXXXL}
-  --space-XXXL: #{f-variable.$space-XXXL}
-  --space-XXL: #{f-variable.$space-XXL}
-  --space-XL: #{f-variable.$space-XL}
-  --space-L: #{f-variable.$space-L}
-  --space-M: #{f-variable.$space-M}
-  --space-R: #{f-variable.$space-R}
-  --space-S: #{f-variable.$space-S}
-  --space-XS: #{f-variable.$space-XS}
-  --space-XXS: #{f-variable.$space-XXS}
-  --space-XXXS: #{f-variable.$space-XXXS}
+  --space-XXXXL: #{$space-XXXXL}
+  --space-XXXL: #{$space-XXXL}
+  --space-XXL: #{$space-XXL}
+  --space-XL: #{$space-XL}
+  --space-L: #{$space-L}
+  --space-M: #{$space-M}
+  --space-R: #{$space-R}
+  --space-S: #{$space-S}
+  --space-XS: #{$space-XS}
+  --space-XXS: #{$space-XXS}
+  --space-XXXS: #{$space-XXXS}
   // font size
-  --font-XXXXL: #{f-variable.$font-XXXXL}
-  --font-XXXL: #{f-variable.$font-XXXL}
-  --font-XXL: #{f-variable.$font-XXL}
-  --font-XL: #{f-variable.$font-XL}
-  --font-L: #{f-variable.$font-L}
-  --font-M: #{f-variable.$font-M}
-  --font-R: #{f-variable.$font-R}
-  --font-S: #{f-variable.$font-S}
-  --font-XS: #{f-variable.$font-XS}
-  --font-XXS: #{f-variable.$font-XXS}
-  --font-XXXS: #{f-variable.$font-XXXS}
+  --font-XXXXL: #{$font-XXXXL}
+  --font-XXXL: #{$font-XXXL}
+  --font-XXL: #{$font-XXL}
+  --font-XL: #{$font-XL}
+  --font-L: #{$font-L}
+  --font-M: #{$font-M}
+  --font-R: #{$font-R}
+  --font-S: #{$font-S}
+  --font-XS: #{$font-XS}
+  --font-XXS: #{$font-XXS}
+  --font-XXXS: #{$font-XXXS}
   // line spacing
-  --line-height-caption: #{f-variable.$line-height-caption}
-  --line-height-bodycopy: #{f-variable.$line-height-bodycopy}
-  --line-height-leadcopy: #{f-variable.$line-height-leadcopy}
-  --line-height-headline: #{f-variable.$line-height-headline}
-  --line-height-subcatch: #{f-variable.$line-height-subcatch}
-  --line-height-catchcopy: #{f-variable.$line-height-catchcopy}
-  --line-height-title: #{f-variable.$line-height-title}
+  --line-height-caption: #{$line-height-caption}
+  --line-height-bodycopy: #{$line-height-bodycopy}
+  --line-height-leadcopy: #{$line-height-leadcopy}
+  --line-height-headline: #{$line-height-headline}
+  --line-height-subcatch: #{$line-height-subcatch}
+  --line-height-catchcopy: #{$line-height-catchcopy}
+  --line-height-title: #{$line-height-title}
   // kerning
-  --letter-spacing-caption: #{f-variable.$letter-spacing-caption}
-  --letter-spacing-bodycopy: #{f-variable.$letter-spacing-bodycopy}
-  --letter-spacing-leadcopy: #{f-variable.$letter-spacing-leadcopy}
-  --letter-spacing-headline: #{f-variable.$letter-spacing-headline}
-  --letter-spacing-subcatch: #{f-variable.$letter-spacing-subcatch}
-  --letter-spacing-catchcopy: #{f-variable.$letter-spacing-catchcopy}
-  --letter-spacing-title: #{f-variable.$letter-spacing-title}
+  --letter-spacing-caption: #{$letter-spacing-caption}
+  --letter-spacing-bodycopy: #{$letter-spacing-bodycopy}
+  --letter-spacing-leadcopy: #{$letter-spacing-leadcopy}
+  --letter-spacing-headline: #{$letter-spacing-headline}
+  --letter-spacing-subcatch: #{$letter-spacing-subcatch}
+  --letter-spacing-catchcopy: #{$letter-spacing-catchcopy}
+  --letter-spacing-title: #{$letter-spacing-title}
   // layer order
-  --layer-order__fixed-content-default: #{f-variable.layer-order(fixed-content-default)}
-  --layer-order__fixed-content-alert: #{f-variable.layer-order(fixed-content-alert)}
-  --layer-order__drawer-navi: #{f-variable.layer-order(drawer-navi)}
-  --layer-order__dialog: #{f-variable.layer-order(dialog)}
-  --layer-order__loading-screen: #{f-variable.layer-order(loading-screen)}
+  --layer-order__fixed-content-default: #{layer-order(fixed-content-default)}
+  --layer-order__fixed-content-alert: #{layer-order(fixed-content-alert)}
+  --layer-order__drawer-navi: #{layer-order(drawer-navi)}
+  --layer-order__dialog: #{layer-order(dialog)}
+  --layer-order__loading-screen: #{layer-order(loading-screen)}
   // directory path
-  --directory-path__document-root: #{f-variable.directory-path(document-root)}
-  --directory-path__images-directory: #{f-variable.directory-path(images-directory)}
+  --directory-path__document-root: #{directory-path(document-root)}
+  --directory-path__images-directory: #{directory-path(images-directory)}
   // color scheme
-  --base-color__1: #{f-color.base-color(1)}
-  --base-color__2: #{f-color.base-color(2)}
-  --base-color__3: #{f-color.base-color(3)}
-  --base-color__4: #{f-color.base-color(4)}
-  --base-color__5: #{f-color.base-color(5)}
-  --base-color__6: #{f-color.base-color(6)}
-  --primary-color__1: #{f-color.primary-color(1)}
-  --primary-color__2: #{f-color.primary-color(2)}
-  --primary-color__3: #{f-color.primary-color(3)}
-  --primary-color__4: #{f-color.primary-color(4)}
-  --primary-color__5: #{f-color.primary-color(5)}
-  --primary-color__6: #{f-color.primary-color(6)}
-  --secondary-color__1: #{f-color.secondary-color(1)}
-  --secondary-color__2: #{f-color.secondary-color(2)}
-  --secondary-color__3: #{f-color.secondary-color(3)}
-  --secondary-color__4: #{f-color.secondary-color(4)}
-  --secondary-color__5: #{f-color.secondary-color(5)}
-  --secondary-color__6: #{f-color.secondary-color(6)}
-  --accent-color__1: #{f-color.accent-color(1)}
-  --accent-color__2: #{f-color.accent-color(2)}
-  --accent-color__3: #{f-color.accent-color(3)}
-  --accent-color__4: #{f-color.accent-color(4)}
-  --accent-color__5: #{f-color.accent-color(5)}
-  --accent-color__6: #{f-color.accent-color(6)}
-  --color-white: #{f-color.$color-white}
-  --color-black: #{f-color.$color-black}
+  --base-color__1: #{base-color(1)}
+  --base-color__2: #{base-color(2)}
+  --base-color__3: #{base-color(3)}
+  --base-color__4: #{base-color(4)}
+  --base-color__5: #{base-color(5)}
+  --base-color__6: #{base-color(6)}
+  --primary-color__1: #{primary-color(1)}
+  --primary-color__2: #{primary-color(2)}
+  --primary-color__3: #{primary-color(3)}
+  --primary-color__4: #{primary-color(4)}
+  --primary-color__5: #{primary-color(5)}
+  --primary-color__6: #{primary-color(6)}
+  --secondary-color__1: #{secondary-color(1)}
+  --secondary-color__2: #{secondary-color(2)}
+  --secondary-color__3: #{secondary-color(3)}
+  --secondary-color__4: #{secondary-color(4)}
+  --secondary-color__5: #{secondary-color(5)}
+  --secondary-color__6: #{secondary-color(6)}
+  --accent-color__1: #{accent-color(1)}
+  --accent-color__2: #{accent-color(2)}
+  --accent-color__3: #{accent-color(3)}
+  --accent-color__4: #{accent-color(4)}
+  --accent-color__5: #{accent-color(5)}
+  --accent-color__6: #{accent-color(6)}
+  --color-white: #{$color-white}
+  --color-black: #{$color-black}
   // UI color
-  --ui-color__error: #{f-color.ui-color(error)}
-  --ui-color__warning: #{f-color.ui-color(warning)}
-  --ui-color__notice: #{f-color.ui-color(notice)}
-  --ui-color__success: #{f-color.ui-color(success)}
-  --ui-color__negative: #{f-color.ui-color(negative)}
+  --ui-color__error: #{ui-color(error)}
+  --ui-color__warning: #{ui-color(warning)}
+  --ui-color__notice: #{ui-color(notice)}
+  --ui-color__success: #{ui-color(success)}
+  --ui-color__negative: #{ui-color(negative)}
   // SNS brand color
-  --sns-color__facebook: #{f-color.sns-color(facebook)}
-  --sns-color__twitter: #{f-color.sns-color(twitter)}
-  --sns-color__tumblr: #{f-color.sns-color(tumblr)}
-  --sns-color__googleplus: #{f-color.sns-color(googleplus)}
-  --sns-color__line: #{f-color.sns-color(line)}
-  --sns-color__hatena: #{f-color.sns-color(hatena)}
-  --sns-color__youtube: #{f-color.sns-color(youtube)}
-  --sns-color__pinterest: #{f-color.sns-color(pinterest)}
-  --sns-color__pocket: #{f-color.sns-color(pocket)}
-  --sns-color__linkedin: #{f-color.sns-color(linkedin)}
-  --sns-color__feedly: #{f-color.sns-color(feedly)}
+  --sns-color__facebook: #{sns-color(facebook)}
+  --sns-color__twitter: #{sns-color(twitter)}
+  --sns-color__tumblr: #{sns-color(tumblr)}
+  --sns-color__googleplus: #{sns-color(googleplus)}
+  --sns-color__line: #{sns-color(line)}
+  --sns-color__hatena: #{sns-color(hatena)}
+  --sns-color__youtube: #{sns-color(youtube)}
+  --sns-color__pinterest: #{sns-color(pinterest)}
+  --sns-color__pocket: #{sns-color(pocket)}
+  --sns-color__linkedin: #{sns-color(linkedin)}
+  --sns-color__feedly: #{sns-color(feedly)}
   // easing function
-  --easing-function__linear: #{map-get(f-animation.$easing-function-list, linear)}
-  --easing-function__ease: #{map-get(f-animation.$easing-function-list, ease)}
-  --easing-function__ease-in: #{map-get(f-animation.$easing-function-list, ease-in)}
-  --easing-function__ease-out: #{map-get(f-animation.$easing-function-list, ease-out)}
-  --easing-function__ease-inout: #{map-get(f-animation.$easing-function-list, ease-inout)}
-  --easing-function__ease-in-sine: #{map-get(f-animation.$easing-function-list, ease-in-sine)}
-  --easing-function__ease-out-sine: #{map-get(f-animation.$easing-function-list, ease-out-sine)}
-  --easing-function__ease-inout-sine: #{map-get(f-animation.$easing-function-list, ease-inout-sine)}
-  --easing-function__ease-in-quad: #{map-get(f-animation.$easing-function-list, ease-in-quad)}
-  --easing-function__ease-out-quad: #{map-get(f-animation.$easing-function-list, ease-out-quad)}
-  --easing-function__ease-inout-quad: #{map-get(f-animation.$easing-function-list, ease-inout-quad)}
-  --easing-function__ease-in-cubic: #{map-get(f-animation.$easing-function-list, ease-in-cubic)}
-  --easing-function__ease-out-cubic: #{map-get(f-animation.$easing-function-list, ease-out-cubic)}
-  --easing-function__ease-inout-cubic: #{map-get(f-animation.$easing-function-list, ease-inout-cubic)}
-  --easing-function__ease-in-quart: #{map-get(f-animation.$easing-function-list, ease-in-quart)}
-  --easing-function__ease-out-quart: #{map-get(f-animation.$easing-function-list, ease-out-quart)}
-  --easing-function__ease-inout-quart: #{map-get(f-animation.$easing-function-list, ease-inout-quart)}
-  --easing-function__ease-in-quint: #{map-get(f-animation.$easing-function-list, ease-in-quint)}
-  --easing-function__ease-out-quint: #{map-get(f-animation.$easing-function-list, ease-out-quint)}
-  --easing-function__ease-inout-quint: #{map-get(f-animation.$easing-function-list, ease-inout-quint)}
-  --easing-function__ease-in-expo: #{map-get(f-animation.$easing-function-list, ease-in-expo)}
-  --easing-function__ease-out-expo: #{map-get(f-animation.$easing-function-list, ease-out-expo)}
-  --easing-function__ease-inout-expo: #{map-get(f-animation.$easing-function-list, ease-inout-expo)}
-  --easing-function__ease-in-circ: #{map-get(f-animation.$easing-function-list, ease-in-circ)}
-  --easing-function__ease-out-circ: #{map-get(f-animation.$easing-function-list, ease-out-circ)}
-  --easing-function__ease-inout-circ: #{map-get(f-animation.$easing-function-list, ease-inout-circ)}
-  --easing-function__ease-in-back: #{map-get(f-animation.$easing-function-list, ease-in-back)}
-  --easing-function__ease-out-back: #{map-get(f-animation.$easing-function-list, ease-out-back)}
-  --easing-function__ease-inout-back: #{map-get(f-animation.$easing-function-list, ease-inout-back)}
+  --easing-function__linear: #{map-get($easing-function-list, linear)}
+  --easing-function__ease: #{map-get($easing-function-list, ease)}
+  --easing-function__ease-in: #{map-get($easing-function-list, ease-in)}
+  --easing-function__ease-out: #{map-get($easing-function-list, ease-out)}
+  --easing-function__ease-inout: #{map-get($easing-function-list, ease-inout)}
+  --easing-function__ease-in-sine: #{map-get($easing-function-list, ease-in-sine)}
+  --easing-function__ease-out-sine: #{map-get($easing-function-list, ease-out-sine)}
+  --easing-function__ease-inout-sine: #{map-get($easing-function-list, ease-inout-sine)}
+  --easing-function__ease-in-quad: #{map-get($easing-function-list, ease-in-quad)}
+  --easing-function__ease-out-quad: #{map-get($easing-function-list, ease-out-quad)}
+  --easing-function__ease-inout-quad: #{map-get($easing-function-list, ease-inout-quad)}
+  --easing-function__ease-in-cubic: #{map-get($easing-function-list, ease-in-cubic)}
+  --easing-function__ease-out-cubic: #{map-get($easing-function-list, ease-out-cubic)}
+  --easing-function__ease-inout-cubic: #{map-get($easing-function-list, ease-inout-cubic)}
+  --easing-function__ease-in-quart: #{map-get($easing-function-list, ease-in-quart)}
+  --easing-function__ease-out-quart: #{map-get($easing-function-list, ease-out-quart)}
+  --easing-function__ease-inout-quart: #{map-get($easing-function-list, ease-inout-quart)}
+  --easing-function__ease-in-quint: #{map-get($easing-function-list, ease-in-quint)}
+  --easing-function__ease-out-quint: #{map-get($easing-function-list, ease-out-quint)}
+  --easing-function__ease-inout-quint: #{map-get($easing-function-list, ease-inout-quint)}
+  --easing-function__ease-in-expo: #{map-get($easing-function-list, ease-in-expo)}
+  --easing-function__ease-out-expo: #{map-get($easing-function-list, ease-out-expo)}
+  --easing-function__ease-inout-expo: #{map-get($easing-function-list, ease-inout-expo)}
+  --easing-function__ease-in-circ: #{map-get($easing-function-list, ease-in-circ)}
+  --easing-function__ease-out-circ: #{map-get($easing-function-list, ease-out-circ)}
+  --easing-function__ease-inout-circ: #{map-get($easing-function-list, ease-inout-circ)}
+  --easing-function__ease-in-back: #{map-get($easing-function-list, ease-in-back)}
+  --easing-function__ease-out-back: #{map-get($easing-function-list, ease-out-back)}
+  --easing-function__ease-inout-back: #{map-get($easing-function-list, ease-inout-back)}
+  // dark theme mode 
+  &[data-theme="dark"]
+    --default-color: #{$color-white}
+    --base-color__1: #{base-color(6)}
+    --base-color__2: #{base-color(5)}
+    --base-color__3: #{base-color(4)}
+    --base-color__4: #{base-color(3)}
+    --base-color__5: #{base-color(2)}
+    --base-color__6: #{base-color(1)}
+    --primary-color__1: #{primary-color(6)}
+    --primary-color__2: #{primary-color(5)}
+    --primary-color__3: #{primary-color(4)}
+    --primary-color__4: #{primary-color(3)}
+    --primary-color__5: #{primary-color(2)}
+    --primary-color__6: #{primary-color(1)}
+    --secondary-color__1: #{secondary-color(6)}
+    --secondary-color__2: #{secondary-color(5)}
+    --secondary-color__3: #{secondary-color(4)}
+    --secondary-color__4: #{secondary-color(3)}
+    --secondary-color__5: #{secondary-color(2)}
+    --secondary-color__6: #{secondary-color(1)}
+    --accent-color__1: #{accent-color(6)}
+    --accent-color__2: #{accent-color(5)}
+    --accent-color__3: #{accent-color(4)}
+    --accent-color__4: #{accent-color(3)}
+    --accent-color__5: #{accent-color(2)}
+    --accent-color__6: #{accent-color(1)}

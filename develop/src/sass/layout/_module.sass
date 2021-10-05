@@ -1,4 +1,4 @@
-@use "../foundation/import" as f
+@use "../foundation/import" as *
 
 /* -------------------------------
  *  config
@@ -14,7 +14,7 @@ $grid-sidebar-max-width: 300px !default
 .l-wrapper
   width: 100%
 .l-inner
-  padding: 0 $container-gutter 
+  padding: 0 $container-gutter
 
 /* -------------------------------
  *  gird system (container)
@@ -27,25 +27,25 @@ $grid-sidebar-max-width: 300px !default
   width: 100%
   max-width: 100%
   margin: 0
-+f.media-query(xxl)
++media-query(xxl)
   .l-container
     max-width: calc(var(--screen-xl) * 1px)
-+f.media-query(xl)
++media-query(xl)
   .l-container
     max-width: calc(var(--screen-lg) * 1px)
-+f.media-query(lg)
++media-query(lg)
   .l-container
     max-width: calc(var(--screen-md) * 1px)
-+f.media-query(md)
++media-query(md)
   .l-container
     max-width: 100%
-+f.media-query(sm)
++media-query(sm)
   .l-container
     max-width: 100%
-+f.media-query(xs)
++media-query(xs)
   .l-container
     max-width: 100%
-+f.media-query(xxs)
++media-query(xxs)
   .l-container
     max-width: 100%
 
@@ -88,7 +88,7 @@ $grid-sidebar-max-width: 300px !default
       width: 91.6666%
     &.__col-12
       width: 100%
-    +f.media-query(switch)
+    +media-query(switch)
       &.__col-1,
       &.__col-2,
       &.__col-3,&.__quad,
@@ -125,7 +125,7 @@ $grid-sidebar-max-width: 300px !default
   &.__col-sidebar-right
     grid-template: (auto / 1fr) minmax($grid-sidebar-min-width, $grid-sidebar-max-width)
     grid-gap: $grid-gutter
-  +f.media-query(switch)
+  +media-query(switch)
     &.__col-quad,
     &.__col-triple,
     &.__col-double,
