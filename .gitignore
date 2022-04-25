@@ -3,4 +3,6 @@
 !/src/images/.gitkeep
 /dist/assets/img/_min/*
 !/dist/assets/img/_min/.gitkeep
+/dist/assets/css/*.map
+/dist/assets/js/*.map
 /package-lock.json
