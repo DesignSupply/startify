@@ -2,6 +2,7 @@
   "name": "startify",
   "version": "3.0.0",
   "description": "Development environment for website creation with design and static coding.",
+  "private": true,
   "main": "gulpfile.js",
   "scripts": {
     "dev": "npx gulp"
