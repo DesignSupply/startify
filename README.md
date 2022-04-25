@@ -4,20 +4,20 @@ Startifyはウェブサイトを作成するために必要なリソースがひ
 
 webpackをベースにした[「Startify2」はこちらから](https://github.com/DesignSupply/startify2 "Startify2") ※以降のアップデートはこちらがメインに実施予定です
 
+また、デザインガイドライン付きのテンプレートと、デザインガイドラインに対応した変数やmixinなどが用意されたSassファイルセット（SCSS、SASS記法に対応）の[「Startify-styles」](https://github.com/DesignSupply/startify-styles "Startify-styles")と併用していただくことで、デザイン制作からコーディングまでのスムーズなワークフローを実現できます。
+
 
 
 ## Features
 
-Startifyで主に出来ることは以下になります。
+Startifyで主にできることは以下になります。
 
-* Sketch、Adobe XD、Figmaに対応したデザインガイドライン付きページデザインテンプレート
 * Gulpを使ったタスクの自動検知
 * テンプレートエンジン（EJS、Pug）を使ったHTMLマークアップと自動整形
 * テンプレートエンジン（EJS、Pug）内での外部JSONデータ読み込み
 * Sass（SCSS記法・SASS記法）のコンパイル
 * CSSLintでのCSSバリデーションチェック
 * ESLintでのJavaScript（ECMAScript）バリデーションチェック
-* デザインテンプレートのフォーマットに合わせたSass変数およびmixinの使用
 * Autoprefixerを使ったベンダープレフィックスの自動付与
 * Browserifyを使った外部スクリプトの読み込み
 * Babelを使ったJavaScript（ECMAScript）のトランスパイル
@@ -32,10 +32,6 @@ Startifyで主に出来ることは以下になります。
 
 
 ## Requirement
-
-Sketch >= 52.4
-
-Adobe XD >= 27.2.12.4
 
 Node.js >= 12.18.3
 
@@ -124,9 +120,6 @@ $ npx gulp imagemin
 
 ## Note
 
-* Sassファイルの変数はSketch、Adobe XD、Figmaの各テンプレートのデザインガイドに合わせています。
-* Sassのファイルおよびディレクトリの構成はFLOCSSに基づいて設計しています。
-* プロジェクト内で使用しているclass名はBEMの命名規則を緩やかに沿った設計になっています。
 * タイトル、ディスクリプション、OGPなどページ固有のmeta要素はEJSもしくはPugのソースファイルのディレクトリに含まれているJSONファイルで指定できます。
 * 初期設定ではEJSおよびPugのHTMLファイル出力先が同じになりますので上書きにご注意ください。
 * 初期設定ではJavaScript（ECMAScript）およびTypeScriptのコンパイル出力先が同じになりますので上書きにご注意ください。
