@@ -2,7 +2,7 @@
 
 Startifyはウェブサイトを作成するために必要なリソースがひととおり揃った静的コーディングの開発環境です。デザインから静的コーディングまでシンプルなウェブページや、jQueryやVue.jsなどのJavaScriptライブラリやフレームワークを使ったウェブアプリケーション制作もワンストップで、タスクランナーのGulpを使って効率よく進めることができます。
 
-現在、当リポジトリは更新を停止しています。以降のアップデートについては下記のリポジトリにて実施していますので、こちらからご利用ください。
+**現在、当リポジトリは更新を停止しています。以降のアップデートについては下記のリポジトリにて実施していますので、こちらからご利用ください。**
 - Pug + Sass + TypeScript + Vue.js + jQueryが利用可能なwebpackベースの開発環境[「Startify2」はこちらから](https://github.com/DesignSupply/startify2 "Startify2") 
 - Pug + Sass + TypeScript + Reactが利用可能なwebpackベースの開発環境[「Startify3」はこちらから](https://github.com/DesignSupply/startify3 "Startify3") 
 
